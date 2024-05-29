@@ -1,0 +1,59 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "文化大数据平台"
+			}
+		},
+		{
+			"path": "pages/dataRepository/dataRepository",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/inquiry/inquiry",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/userMsg/userMsg",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"K
+	},
+	"uniIdRouter": {},
+	
+	"tabBar": { // 设置底部 tab 的表现
+		"color": "#333333",
+		"selectedColor": "green",
+		"borderStyle": "black",
+		"backgroundColor": "#fff",
+		"list": [{
+			"text": "首页",
+			"pagePath": "pages/index/index",
+			"iconPath": "static/temp/icon/icon1.jpg"
+		}, {
+			"text": "闽文数仓",
+			"pagePath": "pages/dataRepository/dataRepository",
+			"iconPath": "static/temp/icon/icon2.jpg"
+		}, {
+			"text": "闽文咨询",
+			"pagePath": "pages/inquiry/inquiry",
+			"iconPath": "static/temp/icon/icon3.jpg"
+		}, {
+			"text": "我的",
+			"pagePath": "pages/userMsg/userMsg",
+			"iconPath": "static/temp/icon/icon4.jpg"
+		}]
+	}
+}

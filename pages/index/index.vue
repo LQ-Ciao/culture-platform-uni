@@ -1,10 +1,10 @@
 <template>
   <div>
     <!-- 引用静态图片的正确路径 -->
-    <el-image src="/static/temp/index.png" style="z-index: -1"></el-image>
+    <el-image src="/static/temp/index.png" style="z-index: -1;width: 100%"></el-image>
 
     <!-- 卡片样式 -->
-    <el-card style="margin: -50px 25px 0 25px; padding: 0 10px 0 10px; z-index:1;Border-radius: 10px">
+    <el-card fit="cover" style="margin: -50px 25px 0 25px; padding: 0 10px 0 10px; z-index:1;Border-radius: 10px">
       <el-row :gutter="25">
         <!-- 引用自定义组件 -->
         <functionBtn

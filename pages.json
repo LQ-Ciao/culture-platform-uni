@@ -3,26 +3,25 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "文化大数据平台"
+				"navigationBarTitleText": "海丝文脉"
 			}
 		},
 		{
 			"path": "pages/dataRepository/dataRepository",
 			"style": {
-				"navigationBarTitleText": ""
+				"navigationBarTitleText": "闽文数仓"
 			}
-			
 		},
 		{
 			"path": "pages/inquiry/inquiry",
 			"style": {
-				"navigationBarTitleText": ""
-			}
+				"navigationBarTitleText": "闽文咨询"
+			},
 		},
 		{
 			"path": "pages/userMsg/userMsg",
 			"style": {
-				"navigationBarTitleText": ""
+				"navigationBarTitleText": "我的"
 			}
 		}
 	],

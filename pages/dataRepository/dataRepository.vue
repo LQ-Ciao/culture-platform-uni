@@ -1,47 +1,70 @@
 <template>
+  <div>
+    <el-image src="" style="height: 300px;width:100%" placeholder="福建中华文化数据库"/>
 
+    <el-radio-group
+        v-model="radioValue"
+        size="large"
+        @change="changeRadio"
+    >
+      <el-radio-button
+          v-for="(item) in radioList"
+          :label="item.value">
+        {{ item.label }}
+      </el-radio-button>
+    </el-radio-group>
+
+
+  </div>
 </template>
 
 <script>
+import { ref } from 'vue'
+
+
 export default {
 
-  props: {
-    name: String,
-    label: {
-      type: [String, Number],
-      default: ''
-    }
-  },
+  props: {},
 
   data() {
     return {
+      radioValue: 0,
+      radioList: [{
+        label: "全部",
+        value: 0,
+      }, {
+        label: "福建历史博物馆",
+        value: 1
+      }, {
+        label: "历史文化",
+        value: 2
+      }, {
+        label: "确权分组",
+        value: 3
+      }],
     };
   },
 
   mounted() {
-    this.getDataSource();
+
   },
 
   methods: {
-    getDataSource() {
-      let newDataList = []
-      let current = 0
-      if (this.dataList && this.dataList.length > 0) {
-        for (let i = 0; i <= this.dataList.length - 1; i++) {
-          if (i % this.carouselImgCount !== 0 || i === 0) {
-            if (!newDataList[current]) {
-              newDataList.push([this.dataList[i]])
-            } else {
-              newDataList[current].push(this.dataList[i])
-            }
-          } else {
-            current++
-            newDataList.push([this.dataList[i]])
-          }
-        }
-      }
-      this.dataList = [...newDataList]
-    },
+    changeRadio() {
+      console.log(this.radioValue);
+
+
+    }
   }
 };
 </script>
+
+<style lang="scss">
+.main-nav {
+  display: flex;
+}
+
+.push {
+  margin-left: auto;
+}
+</style>

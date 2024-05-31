@@ -16,12 +16,13 @@
 			"path": "pages/inquiry/inquiry",
 			"style": {
 				"navigationBarTitleText": "闽文咨询"
-			},
+			}
 		},
 		{
 			"path": "pages/userMsg/userMsg",
 			"style": {
-				"navigationBarTitleText": "我的"
+				"navigationBarTitleText": "我的",
+				"navigationBarBackgroundColor": "#2a6dd6"
 			}
 		}
 	],

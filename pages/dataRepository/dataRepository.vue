@@ -1,11 +1,12 @@
 <template>
   <div>
-    <el-image src="" style="height: 300px;width:100%" placeholder="福建中华文化数据库"/>
+    <el-image src="../static/QQ截图20240530163855.png" style="height: 300px;width:100%" placeholder="福建中华文化数据库"/>
 
     <el-radio-group
         v-model="radioValue"
         size="large"
         @change="changeRadio"
+        style="margin: 24px 24px 24px 24px;"
     >
       <el-radio-button
           v-for="(item) in radioList"

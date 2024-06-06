@@ -3,7 +3,7 @@
     <el-row>
       <el-image :src="iconPath"/>
     </el-row>
-    <div text-align="center" style="padding-top: 10px">
+    <div style="padding-top: 10px;text-align: center">
       <el-row>
         <label>{{ functionLabel }}</label>
       </el-row>

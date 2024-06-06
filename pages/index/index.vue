@@ -5,45 +5,45 @@
 
     <!-- 卡片样式 -->
     <el-card fit="cover" style="margin: -50px 25px 0 25px; padding: 0 10px 0 10px; z-index:1;Border-radius: 10px">
-      <el-row :gutter="25">
+      <el-row :gutter="60">
         <!-- 引用自定义组件 -->
         <functionBtn
-            iconPath="/static/temp/icon/被暴击发生耐性提升.png"
+            iconPath="/static/icon/index/1.jpg"
             functionLabel="红色文化">
         </functionBtn>
 
         <functionBtn
-            iconPath="/static/temp/icon/被暴击发生耐性提升.png"
+            iconPath="/static/icon/index/2.png"
             functionLabel="文化应用">
         </functionBtn>
 
         <functionBtn
-            iconPath="/static/temp/icon/被暴击发生耐性提升.png"
+            iconPath="/static/icon/index/3.jpg"
             functionLabel="沉浸式文旅">
         </functionBtn>
 
         <functionBtn
-            iconPath="/static/temp/icon/被暴击发生耐性提升.png"
+            iconPath="/static/icon/index/4.png"
             functionLabel="闽文数仓">
         </functionBtn>
 
         <functionBtn
-            iconPath="/static/temp/icon/被暴击发生耐性提升.png"
+            iconPath="/static/icon/index/5.png"
             functionLabel="数字资产">
         </functionBtn>
 
         <functionBtn
-            iconPath="/static/temp/icon/被暴击发生耐性提升.png"
+            iconPath="/static/icon/index/6.png"
             functionLabel="闽文博藏">
         </functionBtn>
 
         <functionBtn
-            iconPath="/static/temp/icon/被暴击发生耐性提升.png"
+            iconPath="/static/icon/index/7.png"
             functionLabel="闽文资讯">
         </functionBtn>
 
         <functionBtn
-            iconPath="/static/temp/icon/被暴击发生耐性提升.png"
+            iconPath="/static/icon/index/8.png"
             functionLabel="更多">
         </functionBtn>
       </el-row>

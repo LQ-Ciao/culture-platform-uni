@@ -43,19 +43,23 @@
 		"list": [{
 			"text": "首页",
 			"pagePath": "pages/index/index",
-			"iconPath": "static/temp/icon/icon1.jpg"
+			"iconPath": "static/icon/tabBar/index_normal.png",
+			"selectedIconPath": "static/icon/tabBar/index_selected.png"
 		}, {
 			"text": "闽文数仓",
 			"pagePath": "pages/dataRepository/dataRepository",
-			"iconPath": "static/temp/icon/icon2.jpg"
+			"iconPath": "static/icon/tabBar/data_normal.png",
+			"selectedIconPath": "static/icon/tabBar/data_selected.png"
 		}, {
 			"text": "闽文咨询",
 			"pagePath": "pages/inquiry/inquiry",
-			"iconPath": "static/temp/icon/icon3.jpg"
+			"iconPath": "static/icon/tabBar/inquiry_normal.png",
+			"selectedIconPath": "static/icon/tabBar/inquiry_selected.png"
 		}, {
 			"text": "我的",
 			"pagePath": "pages/userMsg/userMsg",
-			"iconPath": "static/temp/icon/icon4.jpg"
+			"iconPath": "static/icon/tabBar/user_normal.png",
+			"selectedIconPath": "static/icon/tabBar/user_selected.png"
 		}]
 	}
 }

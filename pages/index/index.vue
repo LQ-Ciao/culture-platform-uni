@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 引用静态图片的正确路径 -->
-    <el-image src="/static/temp/index.png" style="z-index: -1;width: 100%"></el-image>
+    <el-image src="/static/head_pic.jpg" style="z-index: -1;width: 100%"></el-image>
 
     <!-- 卡片样式 -->
     <el-card fit="cover" style="margin: -50px 25px 0 25px; padding: 0 10px 0 10px; z-index:1;Border-radius: 10px">
@@ -9,51 +9,67 @@
         <!-- 引用自定义组件 -->
         <functionBtn
             iconPath="/static/icon/index/1.jpg"
-            functionLabel="红色文化">
+            functionLabel="红色文化"
+            @click="openExternalLink('https://www.baidu.com')"
+        >
         </functionBtn>
 
         <functionBtn
             iconPath="/static/icon/index/2.png"
-            functionLabel="文化应用">
+            functionLabel="文化应用"
+            @click="openExternalLink('https://www.baidu.com')"
+        >
         </functionBtn>
 
         <functionBtn
             iconPath="/static/icon/index/3.jpg"
-            functionLabel="沉浸式文旅">
+            functionLabel="沉浸式文旅"
+            @click="openExternalLink('https://www.baidu.com')"
+        >
         </functionBtn>
 
         <functionBtn
             iconPath="/static/icon/index/4.png"
-            functionLabel="闽文数仓">
+            functionLabel="闽文数仓"
+            @click="openExternalLink('https://www.baidu.com')"
+        >
         </functionBtn>
 
         <functionBtn
             iconPath="/static/icon/index/5.png"
-            functionLabel="数字资产">
+            functionLabel="数字资产"
+            @click="openExternalLink('https://www.baidu.com')"
+        >
         </functionBtn>
 
         <functionBtn
             iconPath="/static/icon/index/6.png"
-            functionLabel="闽文博藏">
+            functionLabel="闽文博藏"
+            @click="openExternalLink('https://www.baidu.com')"
+        >
         </functionBtn>
 
         <functionBtn
             iconPath="/static/icon/index/7.png"
-            functionLabel="闽文资讯">
+            functionLabel="闽文资讯"
+            @click="openExternalLink('https://www.baidu.com')"
+        >
         </functionBtn>
 
         <functionBtn
             iconPath="/static/icon/index/8.png"
-            functionLabel="更多">
+            functionLabel="更多"
+            @click="openExternalLink('https://www.baidu.com')"
+        >
         </functionBtn>
       </el-row>
     </el-card>
 
-    <div style="margin: 100px 50px 75px 50px">
+    <div style="margin: 100px 24px 75px 24px">
       <el-image
           style="Border-radius: 10px"
           class="$uni-border-radius-lg"
-          src="/static/temp/风云机关伊莉雅城_果心居士推荐召唤.png"
+          src="/static/QQ截图20240607110746.png"
       ></el-image>
     </div>
 
@@ -76,6 +92,8 @@
 
 <script>
 import functionBtn from './functionBtn.vue';
+import {ElLoading} from 'element-plus'
+
 
 export default {
   components: {
@@ -135,6 +153,18 @@ export default {
       }
       this.dataList = [...newDataList]
     },
+
+    openExternalLink(url) {
+      const loadingInstance = ElLoading.service({
+        fullscreen: true,
+        text: '加载中，请稍候...'
+      });
+
+      setTimeout(() => {
+        loadingInstance.close();
+        window.location.href = url;
+      }, 1000)
+    }
   }
 }
 </script>

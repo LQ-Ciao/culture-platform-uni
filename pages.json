@@ -3,19 +3,22 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "海丝文脉"
+				"navigationBarTitleText": "海丝文脉",
+				"navigationBarBackgroundColor": "#2a6dd6"
 			}
 		},
 		{
 			"path": "pages/dataRepository/dataRepository",
 			"style": {
-				"navigationBarTitleText": "闽文数仓"
+				"navigationBarTitleText": "闽文数仓",
+				"navigationBarBackgroundColor": "#2a6dd6"
 			}
 		},
 		{
 			"path": "pages/inquiry/inquiry",
 			"style": {
-				"navigationBarTitleText": "闽文咨询"
+				"navigationBarTitleText": "闽文咨询",
+				"navigationBarBackgroundColor": "#2a6dd6"
 			}
 		},
 		{

@@ -1,13 +1,11 @@
 <template>
-  <el-col :span="6" style="margin-bottom: 20px">
+  <el-col :span="6" style="margin-bottom: 20px" @click="handleClick">
     <el-row>
       <el-image :src="iconPath"/>
     </el-row>
-    <div style="padding-top: 10px;text-align: center">
-      <el-row>
-        <label>{{ functionLabel }}</label>
-      </el-row>
-    </div>
+    <el-row style="padding-top: 10px;text-align: center">
+      <label>{{ functionLabel }}</label>
+    </el-row>
   </el-col>
 </template>
 
@@ -26,7 +24,11 @@ export default {
       required: true
     }
   },
-  methods: {}
+  methods: {
+    handelClick() {
+      this.$emit('click');
+    }
+  }
 }
 
 </script>

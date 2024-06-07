@@ -1,13 +1,13 @@
 {
-  "hash": "b6552ed2",
+  "hash": "96990f88",
   "configHash": "4336eb35",
-  "lockfileHash": "a6aabd33",
-  "browserHash": "361a5689",
+  "lockfileHash": "3f75a336",
+  "browserHash": "1525017a",
   "optimized": {
     "element-plus": {
       "src": "../../../../../node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "abeda164",
+      "fileHash": "798e6a53",
       "needsInterop": false
     }
   },

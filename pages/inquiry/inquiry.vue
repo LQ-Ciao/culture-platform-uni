@@ -15,8 +15,18 @@
       </div>
       <div>
 
-        <el-card style="width: 100%;background-color: #f3f3f3">
+        <el-card v-if="radioValue==='0'" style="width: 100%;background-color: #f3f3f3">
           <span>数字资源版权确权方法</span>
+        </el-card>
+
+        <el-card v-if="radioValue==='1'" style="width: 100%;background-color: #f3f3f3">
+          <span>
+           <el-icon><ArrowRightBold/></el-icon>
+            海丝文脉中如何进行数字资源授权
+          </span>
+        </el-card>
+        <el-card v-if="radioValue==='1'" style="width: 100%;background-color: #f3f3f3;margin-top: 24px">
+          <span>三位数据加载慢如何解决</span>
         </el-card>
       </div>
     </el-card>
@@ -26,6 +36,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {

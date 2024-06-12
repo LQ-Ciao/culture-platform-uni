@@ -16,18 +16,20 @@
   <div style="margin: 0 24px 0 24px">
     <el-card class="info-card">
       <el-row :gutter="30">
-        <el-col :span="8">
+        <el-col :span="6" />
+        <el-col :span="6">
           <div class="info-item">
             <div class="info-value">{{ collectCount }}</div>
             <div class="info-label">收藏</div>
           </div>
         </el-col>
-        <el-col :span="8">
+        <el-col :span="6">
           <div class="info-item">
             <div class="info-value">{{ thumbCount }}</div>
             <label class="info-label">点赞</label>
           </div>
         </el-col>
+        <el-col :span="6" />
       </el-row>
     </el-card>
   </div>
@@ -107,8 +109,7 @@ export default {
 }
 
 .info-card {
-  display: flex;
-  justify-content: space-around;
+  align-items: center;
   padding: 20px;
   margin-bottom: 20px;
 }

@@ -92,7 +92,6 @@
 
 <script>
 import functionBtn from './functionBtn.vue';
-import {ElLoading} from 'element-plus'
 
 
 export default {

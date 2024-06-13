@@ -1,59 +1,33 @@
 <template>
   <div>
-    <up-image width="100%" mode="widthFix" src="/static/head_pic.jpg" style="z-index: -1"></up-image>
+    <image style="width: 100%;z-index: -1" mode="widthFix" src="/static/banner_bg.png"></image>
 
     <div>
-      <uni-card shadow="1px">
+      <uni-card :shadow="3"
+                style="margin-top: -200px">
         <uni-row>
-          <uni-col :span="6" style="margin-bottom: 20px">
-            <uni-row>
-              <uni-image src="/static/icon/index/1.jpg"></uni-image>
-            </uni-row>
-            <uni-row style="padding-top: 10px;text-align: center">
-              <label>红色文化</label>
-            </uni-row>
-          </uni-col>
-          <uni-col :span="6" style="margin-bottom: 20px">
-            <uni-row>
-              <uni-image src="/static/icon/index/2.png"></uni-image>
-            </uni-row>
-            <uni-row style="padding-top: 10px;text-align: center">
-              <label>文化应用</label>
-            </uni-row>
-          </uni-col>
-          <uni-col :span="6" style="margin-bottom: 20px">
-            <uni-row>
-              <uni-image src="/static/icon/index/3.jpg"></uni-image>
-            </uni-row>
-            <uni-row style="padding-top: 10px;text-align: center">
-              <label>沉浸式文旅</label>
-            </uni-row>
-          </uni-col>
-          <uni-col :span="6" style="margin-bottom: 20px">
-            <uni-row>
-              <uni-image src="/static/icon/index/4.png"></uni-image>
-            </uni-row>
-            <uni-row style="padding-top: 10px;text-align: center">
-              <label>闽文数仓</label>
-            </uni-row>
-          </uni-col>
+          <function-btn
+              v-for="item in functionList"
+              :key="item.iconPath"
+              :iconPath="item.iconPath"
+              :functionLabel="item.functionLabel"
+              @click="openExternalLink(item.url)">
+          </function-btn>
         </uni-row>
-
-
       </uni-card>
+      <up-loading-page :loading="loading"></up-loading-page>
+
+      <div style="padding: 50px 24px 0 24px">
+        <image src="/static/图层4.png"
+               mode="widthFix"
+               style="width: 100%" />
+      </div>
 
 
-      <!--      <up-row gutter="60">-->
-      <!--        <up-col :span="2" style="margin-bottom: 20px">-->
-      <!--          <up-image src="/static/icon/index/1.jpg"></up-image>-->
-      <!--        </up-col>-->
-      <!--        <function-btn-->
-      <!--            v-for="item in functionList"-->
-      <!--            :key="item.iconPath" :iconPath="item.iconPath"-->
-      <!--            :functionLabel="item.functionLabel"-->
-      <!--            @click="openExternalLink(item.url)">-->
-      <!--        </function-btn>-->
-      <!--      </up-row>-->
+
+
+
+
 
     </div>
   </div>
@@ -69,40 +43,40 @@ export default {
   },
   data() {
     return {
+      loading: false,
       functionList: [{
-        iconPath: '/static/icon/index/1.jpg'
+        iconPath: '/static/icon/index/红色文化.png'
         , functionLabel: '红色文化'
         , url: "https://www.baidu.com"
       }, {
-        iconPath: '/static/icon/index/2.png'
+        iconPath: '/static/icon/index/文化应用.png'
         , functionLabel: '文化应用'
         , url: "https://www.baidu.com"
       }, {
-        iconPath: '/static/icon/index/3.jpg'
+        iconPath: '/static/icon/index/沉浸式文旅.png'
         , functionLabel: '沉浸式文旅'
         , url: "https://www.baidu.com"
       }, {
-        iconPath: '/static/icon/index/4.png'
+        iconPath: '/static/icon/index/闽文数仓.png'
         , functionLabel: '闽文数仓'
         , url: "https://www.baidu.com"
       }, {
-        iconPath: '/static/icon/index/5.png'
+        iconPath: '/static/icon/index/数字资产.png'
         , functionLabel: '数字资产'
         , url: "https://www.baidu.com"
       }, {
-        iconPath: '/static/icon/index/6.png'
+        iconPath: '/static/icon/index/闽文博藏.png'
         , functionLabel: '闽文博藏'
         , url: "https://www.baidu.com"
       }, {
-        iconPath: '/static/icon/index/7.png'
+        iconPath: '/static/icon/index/闽文资讯.png'
         , functionLabel: '闽文资讯'
         , url: "https://www.baidu.com"
       }, {
-        iconPath: '/static/icon/index/8.png'
+        iconPath: '/static/icon/index/更多.png'
         , functionLabel: '更多'
         , url: "https://www.baidu.com"
-      }
-      ]
+      }]
     }
 
 
@@ -110,19 +84,18 @@ export default {
 
   methods: {
     openExternalLink(url) {
-      const loadingInstance = ElLoading.service({
-        fullscreen: true,
-        text: '加载中，请稍候...'
-      });
-
+      this.loading = true;
       setTimeout(() => {
-        loadingInstance.close();
         window.location.href = url;
+        this.loading = false;
       }, 1000)
+
     },
 
 
   }
 }
 
+</script>
+<script setup lang="ts">
 </script>

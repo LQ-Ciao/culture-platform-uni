@@ -1,11 +1,11 @@
 <template>
-  <uni-col :span="6" style="margin-bottom: 20px" @click="this.handleClick">
-    <uni-row>
-      <up-image :src="iconPath"/>
+  <uni-col :span="6" class="centered-col" @click="this.handelClick">
+    <uni-row class="centered-row">
+      <image :src="iconPath" mode="widthFix" class="centered-image"/>
     </uni-row>
-    <up-row style="padding-top: 10px;text-align: center">
+    <uni-row class="centered-row">
       <label>{{ functionLabel }}</label>
-    </up-row>
+    </uni-row>
   </uni-col>
 </template>
 
@@ -36,5 +36,23 @@ export default {
 <style lang="scss">
 .text-center {
   text-align: center;
+}
+
+.centered-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.centered-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.centered-image {
+  width: 100px;
 }
 </style>

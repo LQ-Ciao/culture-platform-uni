@@ -2,8 +2,7 @@
 const { defineConfig } = require('@vue/cli-service')
 
 module.exports = {
-    transpileDependencies: [
-    ],
+    transpileDependencies: ['@dcloudio/uni-ui'],
 
     configureWebpack: {
         resolve: {

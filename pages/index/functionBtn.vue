@@ -1,12 +1,12 @@
 <template>
-  <el-col :span="6" style="margin-bottom: 20px" @click="handleClick">
-    <el-row>
-      <el-image :src="iconPath"/>
-    </el-row>
-    <el-row style="padding-top: 10px;text-align: center">
+  <uni-col :span="6" style="margin-bottom: 20px" @click="this.handleClick">
+    <uni-row>
+      <up-image :src="iconPath"/>
+    </uni-row>
+    <up-row style="padding-top: 10px;text-align: center">
       <label>{{ functionLabel }}</label>
-    </el-row>
-  </el-col>
+    </up-row>
+  </uni-col>
 </template>
 
 <script>

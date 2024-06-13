@@ -1,40 +1,40 @@
 <template>
   <el-card class="profile-card">
-    <div class="profile-content">
+    <view class="profile-content">
       <el-avatar
           size="large"
           icon="el-icon-user"
           class="avatar">
       </el-avatar>
-      <div class="user-info">
-        <div class="phone-number">139****5217</div>
+      <view class="user-info">
+        <view class="phone-number">139****5217</view>
         <el-button size="small" round>编辑资料</el-button>
-      </div>
-    </div>
+      </view>
+    </view>
   </el-card>
 
-  <div style="margin: 0 24px 0 24px">
+  <view style="margin: 0 24px 0 24px">
     <el-card class="info-card">
       <el-row :gutter="30">
         <el-col :span="6" />
         <el-col :span="6">
-          <div class="info-item">
-            <div class="info-value">{{ collectCount }}</div>
-            <div class="info-label">收藏</div>
-          </div>
+          <view class="info-item">
+            <view class="info-value">{{ collectCount }}</view>
+            <view class="info-label">收藏</view>
+          </view>
         </el-col>
         <el-col :span="6">
-          <div class="info-item">
-            <div class="info-value">{{ thumbCount }}</div>
+          <view class="info-item">
+            <view class="info-value">{{ thumbCount }}</view>
             <label class="info-label">点赞</label>
-          </div>
+          </view>
         </el-col>
         <el-col :span="6" />
       </el-row>
     </el-card>
-  </div>
+  </view>
 
-  <div style="margin: 0 24px 0 24px">
+  <view style="margin: 0 24px 0 24px">
     <el-card class="menu-card ">
       <el-menu class="el-menu-vertical-demo" router>
         <el-menu-item index="1">
@@ -55,11 +55,11 @@
         </el-menu-item>
       </el-menu>
     </el-card>
-  </div>
+  </view>
 
-  <div style="margin: 0 24px 0 24px">
+  <view style="margin: 0 24px 0 24px">
     <el-button type="primary" size="large" class="logout-button" round>退出登录</el-button>
-  </div>
+  </view>
 </template>
 
 

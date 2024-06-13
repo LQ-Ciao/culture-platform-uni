@@ -1,56 +1,75 @@
 <template>
-  <div>
-    <el-image src="/static/QQ截图20240530163855.png" style="height: 300px;width:100%;"
-              placeholder="福建中华文化数据库"/>
-    <el-card class="defaultMargin">
-      <div class="radio-group-container">
-        <el-radio-group
-            v-model="radioValue"
-            size="large"
-            style=""
-        >
-          <el-radio-button label="0">闽文攻略</el-radio-button>
-          <el-radio-button label="1">常见问题</el-radio-button>
-        </el-radio-group>
-      </div>
-      <div>
-
-        <el-card v-if="radioValue==='0'" style="width: 100%;background-color: #f3f3f3">
-          <span>数字资源版权确权方法</span>
-        </el-card>
-
-        <el-card v-if="radioValue==='1'" style="width: 100%;background-color: #f3f3f3">
-          <span>
-           <el-icon><ArrowRightBold/></el-icon>
+  <view>
+    <image src="/static/闽文攻略_banner.png" style="width:100%;" mode="widthFix"/>
+    <uni-card class="defaultMargin">
+      <view class="radio-group-container">
+        <view class="uni-padding-wrap uni-common-mt">
+          <uni-segmented-control
+              :current="current"
+              :values="items"
+              :style-type="styleType"
+              :active-color="activeColor"
+              @clickItem="onClickItem"/>
+        </view>
+      </view>
+      <view>
+        <uni-card v-if="current === 0" style="background-color: #f3f3f3">
+          <text>
+            <uni-icons type="right"/>数字资源版权确权方法
+          </text>
+        </uni-card>
+        <uni-card v-if="current === 1" style="background-color: #f3f3f3">
+          <text>
+            <uni-icons type="right"/>
             海丝文脉中如何进行数字资源授权
-          </span>
-        </el-card>
-        <el-card v-if="radioValue==='1'" style="width: 100%;background-color: #f3f3f3;margin-top: 24px">
-          <span>三位数据加载慢如何解决</span>
-        </el-card>
-      </div>
-    </el-card>
-
-
-  </div>
+          </text>
+        </uni-card>
+        <uni-card v-if="current === 1" style="background-color: #f3f3f3;margin-top: 24px">
+          <text>
+            <uni-icons type="right"/>
+            三位数据加载慢如何解决
+          </text>
+        </uni-card>
+      </view>
+    </uni-card>
+  </view>
 </template>
 
 <script>
-
 export default {
   data() {
     return {
-      radioValue: 0,
-    }
+      items: ['闽文攻略', '常见问题'],
+      styles: [{
+        value: 'button',
+        text: '按钮',
+        checked: true
+      },
+        {
+          value: 'text',
+          text: '文字'
+        }
+      ],
+      current: 0,
+      activeColor: '#007aff',
+      styleType: 'button'
+
+    };
   },
-  methods: {}
-}
+  methods: {
+
+    onClickItem(e) {
+      if (this.current !== e.currentIndex) {
+        this.current = e.currentIndex
+      }
+    },
+  },
+};
 </script>
 
-
-<style lang="scss">
+<style scoped>
 .defaultMargin {
-  margin: 24px 24px 24px 24px;
+  margin: 24px;
   border-radius: 10px;
 }
 
@@ -59,4 +78,24 @@ export default {
   justify-content: center;
   margin-bottom: 24px;
 }
+
+.uni-common-mt {
+  margin-top: 30px;
+}
+
+.uni-padding-wrap {
+  width: 75%;
+
+}
+
+.content {
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  text-align: center;
+}
+
 </style>

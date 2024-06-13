@@ -3,7 +3,7 @@
     <uni-row class="centered-row">
       <image :src="iconPath" mode="widthFix" class="centered-image"/>
     </uni-row>
-    <uni-row class="centered-row">
+    <uni-row style="">
       <label>{{ functionLabel }}</label>
     </uni-row>
   </uni-col>
@@ -48,11 +48,12 @@ export default {
 
 .centered-row {
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 100%;
 }
 
 .centered-image {
-  width: 100px;
+  width: 50px;
 }
 </style>

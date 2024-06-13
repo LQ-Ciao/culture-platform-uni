@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <view>
     <image style="width: 100%;z-index: -1" mode="widthFix" src="/static/banner_bg.png"></image>
 
-    <div>
+    <view>
       <uni-card :shadow="3"
                 style="margin-top: -200px">
         <uni-row>
@@ -17,11 +17,11 @@
       </uni-card>
       <up-loading-page :loading="loading"></up-loading-page>
 
-      <div style="padding: 50px 24px 0 24px">
+      <view style="padding: 50px 24px 0 24px">
         <image src="/static/图层4.png"
                mode="widthFix"
                style="width: 100%" />
-      </div>
+      </view>
 
 
 
@@ -29,8 +29,8 @@
 
 
 
-    </div>
-  </div>
+    </view>
+  </view>
 </template>
 
 <script>

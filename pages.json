@@ -3,9 +3,6 @@
 		"autoscan": true,
 		// 注意一定要放在custom里，否则无效，https://ask.dcloud.net.cn/question/131175
 		"custom": {
-			"^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
-			"^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
-			"^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue",
 			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
 		}
 	},
@@ -63,23 +60,23 @@
 		"list": [{
 			"text": "首页",
 			"pagePath": "pages/index/index",
-			"iconPath": "static/icon/tabBar/index_normal.png",
-			"selectedIconPath": "static/icon/tabBar/index_selected.png"
+			"iconPath": "static/icon/tabBar/home_normal.png",
+			"selectedIconPath": "static/icon/tabBar/home_push.png"
 		}, {
 			"text": "闽文数仓",
 			"pagePath": "pages/dataRepository/dataRepository",
-			"iconPath": "static/icon/tabBar/data_normal.png",
-			"selectedIconPath": "static/icon/tabBar/data_selected.png"
+			"iconPath": "static/icon/tabBar/Data warehouse_normal.png",
+			"selectedIconPath": "static/icon/tabBar/Data warehouse_push.png"
 		}, {
 			"text": "闽文咨询",
 			"pagePath": "pages/inquiry/inquiry",
-			"iconPath": "static/icon/tabBar/inquiry_normal.png",
-			"selectedIconPath": "static/icon/tabBar/inquiry_selected.png"
+			"iconPath": "static/icon/tabBar/consulting_normal.png",
+			"selectedIconPath": "static/icon/tabBar/consulting_push.png"
 		}, {
 			"text": "我的",
 			"pagePath": "pages/userMsg/userMsg",
-			"iconPath": "static/icon/tabBar/user_normal.png",
-			"selectedIconPath": "static/icon/tabBar/user_selected.png"
+			"iconPath": "static/icon/tabBar/my_normal.png",
+			"selectedIconPath": "static/icon/tabBar/my_push.png"
 		}]
 	}
 }

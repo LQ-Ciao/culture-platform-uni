@@ -1,67 +1,66 @@
 <template>
-  <el-card class="profile-card">
-    <view class="profile-content">
-      <el-avatar
-          size="large"
-          icon="el-icon-user"
-          class="avatar">
-      </el-avatar>
-      <view class="user-info">
-        <view class="phone-number">139****5217</view>
-        <el-button size="small" round>编辑资料</el-button>
-      </view>
+  <view>
+    <view :style="{background: 'url('+backgroundUrl+')'}">
+      <uni-row class="baseMsg">
+        <uni-col :span="8">
+          <image src="/static/icon/userMsg/default_avatar.png" style="width: 125px" mode="widthFix"/>
+        </uni-col>
+        <uni-col :span="8">
+          <uni-row>
+            <uni-col>
+              <text class="phoneNumber">
+                {{ phoneNumber }}
+              </text>
+            </uni-col>
+            <uni-col style="margin-top: 20px">
+              <button plain="true" size="mini" style="border-radius: 25px;color: #ffffff">编辑资料</button>
+            </uni-col>
+          </uni-row>
+        </uni-col>
+      </uni-row>
     </view>
-  </el-card>
 
-  <view style="margin: 0 24px 0 24px">
-    <el-card class="info-card">
-      <el-row :gutter="30">
-        <el-col :span="6" />
-        <el-col :span="6">
-          <view class="info-item">
-            <view class="info-value">{{ collectCount }}</view>
-            <view class="info-label">收藏</view>
-          </view>
-        </el-col>
-        <el-col :span="6">
-          <view class="info-item">
-            <view class="info-value">{{ thumbCount }}</view>
-            <label class="info-label">点赞</label>
-          </view>
-        </el-col>
-        <el-col :span="6" />
-      </el-row>
-    </el-card>
-  </view>
 
-  <view style="margin: 0 24px 0 24px">
-    <el-card class="menu-card ">
-      <el-menu class="el-menu-vertical-demo" router>
-        <el-menu-item index="1">
-          <i class="el-icon-document"></i>
-          <span slot="title">账号信息</span>
-        </el-menu-item>
-        <el-menu-item index="2">
-          <i class="el-icon-star-on"></i>
-          <span slot="title">我的收藏</span>
-        </el-menu-item>
-        <el-menu-item index="3">
-          <i class="el-icon-message"></i>
-          <span slot="title">我的咨询</span>
-        </el-menu-item>
-        <el-menu-item index="4">
-          <i class="el-icon-chat-line-round"></i>
-          <span slot="title">我的评论</span>
-        </el-menu-item>
-      </el-menu>
-    </el-card>
-  </view>
+    <view>
+      <uni-card>
+        <uni-row>
+          <uni-col :span="12" class="centerText">
+            <text style="font-size:50px">{{ collectCount }}</text>
+            <text>收藏</text>
+          </uni-col>
+          <uni-col :span="12" class="centerText">
+            <text style="font-size:50px">{{ thumbCount }}</text>
+            <text>点赞</text>
+          </uni-col>
 
-  <view style="margin: 0 24px 0 24px">
-    <el-button type="primary" size="large" class="logout-button" round>退出登录</el-button>
+        </uni-row>
+      </uni-card>
+    </view>
+
+    <view>
+      <uni-card>
+        <view v-for="(item,index) in this.menuItems">
+          <uni-row class="menuItem">
+            <uni-col :span="3">
+              <image :src="item.icon" style="width: 30px" mode="widthFix"/>
+            </uni-col>
+            <uni-col :span="20">
+              <text class="menuText"> {{ item.label }}</text>
+            </uni-col>
+            <uni-col :span="1">
+              <uni-icons type="right" size="30"></uni-icons>
+            </uni-col>
+          </uni-row>
+          <view v-if="index< menuItems.length-1" class="divLine"></view>
+        </view>
+      </uni-card>
+    </view>
+
+    <view style="margin: 0 24px 0 24px">
+      <button type="warn" size="large" class="logout-button">退出登录</button>
+    </view>
   </view>
 </template>
-
 
 <script>
 export default {
@@ -69,77 +68,78 @@ export default {
     return {
       collectCount: 0,
       thumbCount: 0,
-    }
+      phoneNumber: '13111111111',
+      backgroundUrl: '/static/usrMsg_background.png',
+      menuItems: [{
+        label: "账号信息",
+        icon: "/static/icon/userMsg/account.png",
+        url: "",
+      }, {
+        label: "我的收藏",
+        icon: "/static/icon/userMsg/collection.png",
+        url: "",
+      }, {
+        label: "我的咨询",
+        icon: "/static/icon/userMsg/consulting.png",
+        url: "",
+      }, {
+        label: "我的评论",
+        icon: "/static/icon/userMsg/comment.png",
+        url: "",
+      }]
+    };
   },
-  methods: {}
-}
-// Your script setup (if any)
+  methods: {},
+};
 </script>
 
 <style scoped>
-.profile-card {
-  background-image: url('/static/QQ截图20240531102211.png'); /* Replace with the actual path to your background image */
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.profile-content {
+.baseMsg {
+  padding: 50px 0 50px 50px;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.avatar {
-  margin-bottom: 20px;
+.phoneNumber {
+  font-size: 20px;
+  color: #fff;
 }
 
-.user-info {
+.centerText {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 15px 0 15px 0;
 }
 
-.phone-number {
-  font-size: 24px;
+.centerText text {
   margin-bottom: 10px;
+  font-size: 20px;
+  color: #333333;
+  padding-top: 10px;
 }
 
-.info-card {
+.menuItem {
+  margin: 24px 24px 24px 24px;
+  display: flex;
   align-items: center;
-  padding: 20px;
-  margin-bottom: 20px;
 }
 
-.info-item {
-  text-align: center;
-}
-
-.info-value {
-  font-size: 24px;
-}
-
-.info-label {
-  color: gray;
-}
-
-.menu-card {
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.el-menu-vertical-demo {
-  width: 100%;
-}
-
-.logout-card {
-  text-align: center;
+.menuText {
+  font-size: 20px;
+  color: #333333;
 }
 
 .logout-button {
   width: 100%;
+  border-radius: 40px;
+}
+
+/*分割线样式*/
+.divLine {
+  background: #E0E3DA;
+  width: 100%;
+  height: 1rpx;
 }
 </style>

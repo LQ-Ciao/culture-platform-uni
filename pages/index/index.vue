@@ -1,9 +1,8 @@
 <template>
   <view>
     <image style="width: 100%;z-index: -1" mode="widthFix" src="/static/banner_bg.png"></image>
-
     <view>
-      <uni-card :shadow="3"
+      <uni-card shadow="3"
                 style="margin-top: -200px">
         <uni-row>
           <function-btn
@@ -20,13 +19,8 @@
       <view style="padding: 50px 24px 0 24px">
         <image src="/static/图层4.png"
                mode="widthFix"
-               style="width: 100%" />
+               style="width: 100%"/>
       </view>
-
-
-
-
-
 
 
     </view>
@@ -78,8 +72,6 @@ export default {
         , url: "https://www.baidu.com"
       }]
     }
-
-
   },
 
   methods: {
@@ -97,5 +89,11 @@ export default {
 }
 
 </script>
-<script setup lang="ts">
-</script>
+<style>
+.functionArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+</style>

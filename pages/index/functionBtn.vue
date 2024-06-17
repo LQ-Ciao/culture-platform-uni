@@ -1,11 +1,10 @@
 <template>
-  <uni-col :span="6" class="centered-col" @click="this.handelClick">
-    <uni-row class="centered-row">
-      <image :src="iconPath" mode="widthFix" class="centered-image"/>
-    </uni-row>
-    <uni-row style="">
-      <label>{{ functionLabel }}</label>
-    </uni-row>
+  <uni-col :span="6" @click="this.handelClick">
+    <view class="centered">
+      <image :src="iconPath" mode="widthFix" class="function-icon"/>
+    </view>
+    <br/>
+    <label class="centered-label">{{ functionLabel }}</label>
   </uni-col>
 </template>
 
@@ -38,13 +37,6 @@ export default {
   text-align: center;
 }
 
-.centered-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
 
 .centered-row {
   display: flex;
@@ -53,7 +45,21 @@ export default {
   width: 100%;
 }
 
-.centered-image {
+.function-icon {
   width: 50px;
+
+}
+
+.centered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.centered-label {
+  margin: 6px 0 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 </style>

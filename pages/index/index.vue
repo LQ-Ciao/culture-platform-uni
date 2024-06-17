@@ -1,10 +1,11 @@
 <template>
   <view>
+
     <image style="width: 100%;z-index: -1" mode="widthFix" src="/static/banner_bg.png"></image>
     <view>
       <uni-card shadow="3"
                 style="margin-top: -200px">
-        <uni-row>
+        <uni-row class="functionArea">
           <function-btn
               v-for="item in functionList"
               :key="item.iconPath"
@@ -14,7 +15,7 @@
           </function-btn>
         </uni-row>
       </uni-card>
-      <up-loading-page :loading="loading"></up-loading-page>
+<!--      <up-loading-page :loading="loading"></up-loading-page>-->
 
       <view style="padding: 50px 24px 0 24px">
         <image src="/static/图层4.png"
@@ -96,4 +97,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
+
+
 </style>

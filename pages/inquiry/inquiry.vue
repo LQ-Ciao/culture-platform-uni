@@ -80,7 +80,7 @@ export default {
 }
 
 .uni-common-mt {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .uni-padding-wrap {

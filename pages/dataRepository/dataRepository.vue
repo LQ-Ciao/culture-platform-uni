@@ -5,10 +5,9 @@
     <scroll-view scroll-x="true" class="button-container" enhanced="true"	show-scrollbar="false">
       <view class="button-wrapper">
         <button
-            class="button"
+            :class="selectedButton === button.value ? 'selected-btn' : 'default-btn'"
             v-for="button in buttonList"
             :key="button.value"
-            :type="selectedButton === button.value ? 'primary' : 'default'"
             @click="selectButton(button.value)"
             style="margin-right: 24px;"
         >
@@ -62,6 +61,18 @@ scroll-view::-webkit-scrollbar {
 }
 
 .button-container .button {
+  flex: 0 0 auto; /* 确保按钮不会拉伸 */
+  margin-right: 10px; /* 按钮之间的间距 */
+}
+
+.selected-btn {
+  flex: 0 0 auto; /* 确保按钮不会拉伸 */
+  margin-right: 10px; /* 按钮之间的间距 */
+  color: #fff;
+  background-color: #007aff;
+}
+
+.default-btn {
   flex: 0 0 auto; /* 确保按钮不会拉伸 */
   margin-right: 10px; /* 按钮之间的间距 */
 }

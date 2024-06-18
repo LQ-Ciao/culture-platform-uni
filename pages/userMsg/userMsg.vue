@@ -1,12 +1,13 @@
 <template>
   <view>
-    <view :style="{background: 'url('+backgroundUrl+')'}">
-      <uni-row class="baseMsg">
-        <uni-col :span="8">
-          <image src="/static/icon/userMsg/default_avatar.png" style="width: 125px" mode="widthFix"/>
+    <view class="center" style="height: 250px;" :style="{background: 'url('+backgroundUrl+')'}">
+      <uni-row style="height: 100px">
+        <uni-col :span="9">
+          <image src="/static/icon/userMsg/default_avatar.png" style="width: 100px" mode="widthFix"/>
         </uni-col>
-        <uni-col :span="8">
-          <uni-row>
+
+        <uni-col :span="15">
+          <uni-row style="height: 100px">
             <uni-col>
               <text class="phoneNumber">
                 {{ phoneNumber }}
@@ -20,27 +21,31 @@
       </uni-row>
     </view>
 
-
     <view>
       <uni-card>
         <uni-row>
           <uni-col :span="12" class="centerText">
-            <text style="font-size:50px">{{ collectCount }}</text>
-            <text>收藏</text>
+            <view class="innerText">
+              <text style="font-size: 50px">{{ collectCount }}</text>
+              <br/>
+              <text>收藏</text>
+            </view>
           </uni-col>
           <uni-col :span="12" class="centerText">
-            <text style="font-size:50px">{{ thumbCount }}</text>
-            <text>点赞</text>
+            <view class="innerText">
+              <text style="font-size: 50px">{{ thumbCount }}</text>
+              <br/>
+              <text>点赞</text>
+            </view>
           </uni-col>
-
         </uni-row>
       </uni-card>
     </view>
 
     <view>
-      <uni-card>
-        <view v-for="(item,index) in this.menuItems">
-          <uni-row class="menuItem">
+      <uni-card style="padding: 24px 0 24px 0">
+        <view v-for="(item,index) in this.menuItems" style="margin: 24px 0 24px 0">
+          <uni-row>
             <uni-col :span="3">
               <image :src="item.icon" style="width: 30px" mode="widthFix"/>
             </uni-col>
@@ -94,9 +99,11 @@ export default {
 </script>
 
 <style scoped>
-.baseMsg {
-  padding: 50px 0 50px 50px;
+.center {
+  flex: auto;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -107,28 +114,20 @@ export default {
 
 .centerText {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 15px 0 15px 0;
 }
 
-.centerText text {
-  margin-bottom: 10px;
-  font-size: 20px;
-  color: #333333;
-  padding-top: 10px;
-}
-
-.menuItem {
-  margin: 24px 24px 24px 24px;
-  display: flex;
-  align-items: center;
+.innerText {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .menuText {
   font-size: 20px;
   color: #333333;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .logout-button {

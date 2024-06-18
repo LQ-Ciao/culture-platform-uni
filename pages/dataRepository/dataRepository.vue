@@ -10,6 +10,7 @@
             :key="button.value"
             @click="selectButton(button.value)"
             style="margin-right: 24px;"
+            size="mini"
         >
           {{ button.label }}
         </button>

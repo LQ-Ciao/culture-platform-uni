@@ -85,7 +85,6 @@ export default {
 
 .uni-padding-wrap {
   width: 75%;
-
 }
 
 .content {

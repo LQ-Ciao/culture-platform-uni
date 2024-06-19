@@ -1,5 +1,8 @@
 <template>
   <view>
+
+    <button @tap="testPage">测试按钮</button>
+
     <image style="width: 100%;z-index: -1" mode="widthFix" src="/static/banner_bg.png"></image>
     <view>
       <uni-card shadow="3"
@@ -10,7 +13,7 @@
               :key="item.iconPath"
               :iconPath="item.iconPath"
               :functionLabel="item.functionLabel"
-              @click="openExternalLink(item.url)">
+              @tap="openExternalLink(item.url)">
           </function-btn>
         </uni-row>
       </uni-card>
@@ -74,16 +77,17 @@ export default {
   },
 
   methods: {
-    openExternalLink(url) {
+    testPage() {
       uni.navigateTo({
-        url: 'pages/webView/webView?url=' + url
+        url: "/pages/test/test",
       })
-
-
-
     },
 
-
+    openExternalLink(url) {
+      uni.navigateTo({
+        url: "/pages/itemDetail/itemDetail?id=123&name=test",
+      })
+    },
   }
 }
 

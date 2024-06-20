@@ -1,7 +1,7 @@
 <template>
   <uni-table :border="border" :stripe="stripe" :emptyText="emptyText">
     <!-- 表头行 -->
-    <uni-tr v-if="hideHeader">
+    <uni-tr v-if="!hideHeader">
       <uni-th
           v-for="(header, index) in headers"
           :key="index"
@@ -65,7 +65,7 @@ export default {
     },
     hideHeader: {
       type: Boolean,
-      default: false
+      default: true
     }
   },
 };

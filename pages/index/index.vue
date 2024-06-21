@@ -79,7 +79,7 @@ export default {
   methods: {
     testPage() {
       uni.navigateTo({
-        url: "/pages/test/test",
+        url: "/pages/itemDetail/glbPage/glbPage",
       })
     },
 

@@ -5,12 +5,12 @@
         <swiper class="swiper" circular :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval"
                 :duration="duration">
           <swiper-item v-for="img in this.imgList">
-            <image style="width: 100%" :src="img" mode="heightFix"/>
+            <image style="width: 100%" :src="img" mode="heightFix" @tap="openMediaFile"/>
           </swiper-item>
         </swiper>
 
         <view style="margin: 50px 0 40px 0">
-          <view class="uni-padding-wrap uni-common-mt" @tap="openMediaFile">
+          <view class="uni-padding-wrap uni-common-mt" >
             <uni-segmented-control
                 :current="current"
                 :values="items"
@@ -135,7 +135,9 @@ export default {
 
     openMediaFile() {
       if (this.current === 1) {
-        console.log("跳转到三维模型");
+        uni.navigateTo({
+          url: "/pages/itemDetail/glbPage/glbPage",
+        })
       }
       if (this.current === 2) {
         console.log("打开视频");

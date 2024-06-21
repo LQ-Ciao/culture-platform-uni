@@ -50,6 +50,13 @@
     	{
     		"navigationBarTitleText" : ""
     	}
+    },
+    {
+    	"path" : "pages/itemDetail/glbPage/glbPage",
+    	"style" :
+    	{
+    		"navigationBarTitleText" : ""
+    	}
     }
   ],
   "globalStyle": {

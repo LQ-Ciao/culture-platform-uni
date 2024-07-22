@@ -1,5 +1,5 @@
 <template>
-  <uni-col :span="6" @click="this.handelClick">
+  <uni-col :span="span" @click="this.handelClick">
     <view class="centered">
       <image :src="iconPath" mode="widthFix" class="function-icon"/>
     </view>
@@ -14,6 +14,10 @@ export default {
     return {}
   },
   props: {
+    span:{
+      type: Number,
+      default: 6
+    },
     iconPath: {
       type: String,
       required: true

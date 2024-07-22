@@ -1,0 +1,23 @@
+.indexContent {
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  background-color: #f0ad4e;
+  margin-top: -50px;
+}
+
+.functionArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-item {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}

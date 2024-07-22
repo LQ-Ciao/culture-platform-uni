@@ -3,10 +3,10 @@
     <image :src="this.imgPath" mode="widthFix"></image>
     <text>{{ this.title }}</text>
     <uni-row justify="space-between">
-      <uni-col span="12">
+      <uni-col :span="12">
         <text>{{ this.newsType }}</text>
       </uni-col>
-      <uni-col span="12">
+      <uni-col :span="12">
         <div style="text-align: right;">
           <text>{{ this.time }}</text>
         </div>

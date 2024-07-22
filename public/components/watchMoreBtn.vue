@@ -1,25 +1,29 @@
 <template>
-  <view class="indexTitle">
-    <view class="indexTitle-text">查看更多</view>
+  <view class="view-more-component">
+    <image class="background-image" src="https://s2.loli.net/2024/07/22/qV1WFnfjlBzu8K5.png" mode="widthFix"></image>
+    <text class="view-more-text">查看更多</text>
   </view>
 </template>
 
-<style scoped>
-.indexTitle {
-  width: 100%;
-  height:100%;
+<style>
+.view-more-component {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('https://s2.loli.net/2024/07/22/qV1WFnfjlBzu8K5.png');
-  background-size: 200px auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 10px;
+  width: 50%; /* Adjust as needed */
+  margin: 30px auto;
 }
 
-.indexTitle-text {
-  font-size: 15px;
-  color: #ffffff;
+.background-image {
+  width: 100%;
+  z-index: 0;
+}
+
+.view-more-text {
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  z-index: 1;
 }
 </style>

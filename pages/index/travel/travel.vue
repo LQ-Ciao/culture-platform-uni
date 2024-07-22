@@ -5,6 +5,7 @@
     </image>
 
     <uni-card>
+      <uni-easyinput v-model="value" style="border-radius: 100px;margin-bottom: 20px"></uni-easyinput>
       <uni-row class="functionArea">
         <function-btn
             v-for="item in functionList"
@@ -22,7 +23,7 @@
                  class="news-item"
       ></base-news>
 
-      <watch-more-btn></watch-more-btn>
+      <watch-more-btn @tap="watchMore"></watch-more-btn>
     </uni-card>
   </view>
 </template>
@@ -40,6 +41,7 @@ export default {
   },
   data() {
     return {
+      value: '',
       functionList: [{
         iconPath: 'https://s2.loli.net/2024/07/22/kPmGEx89yZsHjTW.png'
         , functionLabel: '博物馆'
@@ -77,7 +79,13 @@ export default {
       }]
     }
   },
-  methods: {}
+  methods: {
+    watchMore() {
+      uni.navigateTo({
+        url: "https://www.baidu.com"
+      })
+    }
+  }
 }
 </script>
 

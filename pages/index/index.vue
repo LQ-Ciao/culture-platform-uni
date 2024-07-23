@@ -22,8 +22,10 @@
         </uni-col>
       </uni-row>
 
+      <!-- 地市专题 -->
       <view style="margin-top: 20px;margin-bottom: 30px">
-        <image mode="widthFix" style="width:100%" src="https://s2.loli.net/2024/07/22/jZdoI7eg619SycY.png"></image>
+        <image mode="widthFix" style="width:100%" src="https://s2.loli.net/2024/07/22/jZdoI7eg619SycY.png"
+        @tap="toAreaThematic"></image>
       </view>
 
       <sub-title title="最新资讯"></sub-title>
@@ -121,6 +123,12 @@ export default {
         url: url,
       })
     },
+
+    toAreaThematic() {
+      uni.navigateTo({
+        url: "/pages/index/areaThematic/areaThematic"
+      })
+    }
   }
 }
 

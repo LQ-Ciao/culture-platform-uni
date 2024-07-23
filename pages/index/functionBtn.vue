@@ -50,8 +50,8 @@ export default {
 }
 
 .function-icon {
-  width: 50px;
-
+  width: 100%;
+  padding: 0 10px 0 10px ;
 }
 
 .centered {

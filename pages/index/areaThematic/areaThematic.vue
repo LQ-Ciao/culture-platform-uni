@@ -1,7 +1,7 @@
 <template>
   <view>
     <image style="width: 100%;z-index: -1" mode="widthFix"
-           src="https://s2.loli.net/2024/07/22/n6TM1GuHwAy28Rk.png">
+           src="https://s2.loli.net/2024/07/22/mRzPEJwyfAtpGch.png">
     </image>
 
     <uni-card>
@@ -14,15 +14,27 @@
         </function-btn>
       </uni-row>
 
-      <sub-title title="精彩推荐"></sub-title>
+      <sub-title title="精彩资讯"></sub-title>
       <base-news v-for="item in newsList"
                  :title="item.title"
                  :time="item.time"
                  :imgPath="item.imgPath"
                  class="news-item"
       ></base-news>
-
       <watch-more-btn @tap="watchMore"></watch-more-btn>
+
+      <sub-title title="典藏文物">
+
+      </sub-title>
+      <function-btn
+          v-for="item in artifactsList"
+          :iconPath="item.iconPath"
+          :functionLabel="item.functionLabel"
+          :span="8">
+      </function-btn>
+      <watch-more-btn @tap="watchMore"></watch-more-btn>
+
+
     </uni-card>
   </view>
 </template>
@@ -42,28 +54,28 @@ export default {
     return {
       value: '',
       functionList: [{
-        iconPath: 'https://s2.loli.net/2024/07/22/kPmGEx89yZsHjTW.png'
-        , functionLabel: '博物馆'
+        iconPath: 'https://s2.loli.net/2024/07/22/5lDYTFPd7bUKEL1.png'
+        , functionLabel: '咨询'
         , url: "https://www.baidu.com"
       }, {
-        iconPath: 'https://s2.loli.net/2024/07/22/wqmTV7YL3EuhMnb.png'
-        , functionLabel: '文旅景区'
+        iconPath: 'https://s2.loli.net/2024/07/22/juIldaNRE7Z5JQ2.png'
+        , functionLabel: '文游'
         , url: "https://www.baidu.com"
       }, {
-        iconPath: 'https://s2.loli.net/2024/07/22/yZp7eCOjBWPUEw9.png'
-        , functionLabel: '图书馆'
+        iconPath: 'https://s2.loli.net/2024/07/22/azPjbtIg1ZD6qLc.png'
+        , functionLabel: '历史'
         , url: "https://www.baidu.com"
       }, {
-        iconPath: 'https://s2.loli.net/2024/07/22/qWlCiagnoK7GtXv.png'
-        , functionLabel: '物质文化遗产'
+        iconPath: 'https://s2.loli.net/2024/07/22/JcNpB2jf3YOIn5D.png'
+        , functionLabel: '特产'
         , url: "https://www.baidu.com"
       }, {
-        iconPath: 'https://s2.loli.net/2024/07/22/ZEoK91HGkl84xhv.png'
-        , functionLabel: '非物质文化遗产'
+        iconPath: 'https://s2.loli.net/2024/07/22/M8TuKCiNtA7eIWF.png'
+        , functionLabel: '非遗'
         , url: "https://www.baidu.com"
       }, {
-        iconPath: 'https://s2.loli.net/2024/07/22/tucDGXqKajLsUmT.png'
-        , functionLabel: '参观导览'
+        iconPath: 'https://s2.loli.net/2024/07/22/ZW85mSoHiFpyuUI.png'
+        , functionLabel: '品牌'
         , url: "https://www.baidu.com"
       }],
 
@@ -75,6 +87,28 @@ export default {
         title: "海上丝绸之路是古代中西方文明通过海路，以商贸为依托，承载文化、艺术交流的和平之路。"
         , time: "2024年7月22日 15点24分"
         , imgPath: "https://s2.loli.net/2024/07/22/n6TM1GuHwAy28Rk.png"
+      }],
+
+      artifactsList: [{
+        iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
+        , functionLabel: '明德化窑白釉荷叶洗'
+        , url: "https://www.baidu.com"
+      }, {
+        iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
+        , functionLabel: '明德化窑白釉荷叶洗'
+        , url: "https://www.baidu.com"
+      }, {
+        iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
+        , functionLabel: '明德化窑白釉荷叶洗'
+        , url: "https://www.baidu.com"
+      }, {
+        iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
+        , functionLabel: '明德化窑白釉荷叶洗'
+        , url: "https://www.baidu.com"
+      }, {
+        iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
+        , functionLabel: '明德化窑白釉荷叶洗'
+        , url: "https://www.baidu.com"
       }]
     }
   },

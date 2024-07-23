@@ -58,10 +58,22 @@
       }
     },
     {
-    	"path" : "pages/index/travel/travel",
+      "path": "pages/index/travel/travel",
+      "style": {
+        "navigationBarTitleText": "沉浸式文旅"
+      }
+    },
+    {
+      "path": "pages/index/areaThematic/areaThematic",
+      "style": {
+        "navigationBarTitleText": "地市专题"
+      }
+    },
+    {
+    	"path" : "pages/publicService/publicService",
     	"style" : 
     	{
-    		"navigationBarTitleText" : ""
+    		"navigationBarTitleText" : "公共服务"
     	}
     }
   ],
@@ -86,6 +98,7 @@
         "iconPath": "static/icon/tabBar/home_normal.png",
         "selectedIconPath": "static/icon/tabBar/home_push.png"
       },
+
       {
         "text": "闽文数仓",
         "pagePath": "pages/dataRepository/dataRepository",
@@ -97,6 +110,12 @@
         "pagePath": "pages/inquiry/inquiry",
         "iconPath": "static/icon/tabBar/consulting_normal.png",
         "selectedIconPath": "static/icon/tabBar/consulting_push.png"
+      },
+      {
+        "text": "公共服务",
+        "pagePath": "pages/publicService/publicService",
+        "iconPath": "static/icon/tabBar/public-service_normal.png",
+        "selectedIconPath": "static/icon/tabBar/public-service_push.png"
       },
       {
         "text": "我的",

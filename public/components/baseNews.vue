@@ -1,12 +1,12 @@
 <template>
   <view>
-    <uni-row gutter="20">
+    <uni-row gutter="20" >
       <uni-col :span="14">
         <text>{{ title }}</text>
         <text class="footerTime">{{ time }}</text>
       </uni-col>
       <uni-col :span="10">
-        <image class="img" :src="imgPath" mode="heightFix" style="height:100px"></image>
+        <image class="img" :src="imgPath" mode="heightFix" style="height:100px;margin-bottom: 20px"></image>
       </uni-col>
     </uni-row>
   </view>

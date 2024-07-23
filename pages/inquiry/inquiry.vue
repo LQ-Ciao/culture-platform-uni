@@ -1,6 +1,6 @@
 <template>
   <view>
-    <image src="/static/闽文攻略_banner.png" style="width:100%;" mode="widthFix"/>
+    <image src="https://s2.loli.net/2024/07/23/Op27qCFEuQbX4kH.png" style="width:100%;" mode="widthFix"/>
     <uni-card class="defaultMargin">
       <view class="radio-group-container">
         <view class="uni-padding-wrap uni-common-mt">

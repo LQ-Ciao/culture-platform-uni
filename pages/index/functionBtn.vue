@@ -65,5 +65,6 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  font-size: 12px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <view>
-    <uni-row gutter="20" >
+    <uni-row :gutter="20" >
       <uni-col :span="14">
         <text>{{ title }}</text>
         <text class="footerTime">{{ time }}</text>

@@ -1,32 +1,32 @@
 <template>
   <view class="base-banner">
-    <view v-for="item in items" :key="item.id">
-      <image class="background-image" :src="item.img" mode="widthFix"></image>
-      <text class="view-more-text">查看更多</text>
-    </view>
+    <image class="background-image" :src="imgPath" mode="widthFix"></image>
+    <text class="view-more-text">┃ {{ title }}</text>
   </view>
 </template>
 
 <script>
 export default {
   props: {
-    items: {
-      type: Array,
-      required: true,
-      default: []
+    imgPath: {
+      type: String,
+      default: ''
+    },
+    title: {
+      type: String,
+      default: ''
     }
   }
 }
 </script>
 
-
 <style scoped>
 .base-banner {
-  padding: 20px 20px 0 20px;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  width: 90%; /* Adjust as needed */
+  margin: 30px auto;
 }
 
 .background-image {
@@ -36,8 +36,14 @@ export default {
 
 .view-more-text {
   position: absolute;
-  color: white;
-  font-size: 18px;
+  left: 10px; /* Adjust as needed for horizontal alignment */
+  color: #280e0c;
+  font-size: 20px;
+  font-weight: bold;
   z-index: 1;
+  font-family: SimSun;
+  display: flex;
+  align-items: center;
+  height: 100%; /* Ensure vertical centering */
 }
 </style>

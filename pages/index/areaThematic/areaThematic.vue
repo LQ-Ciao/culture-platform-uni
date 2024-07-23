@@ -18,9 +18,11 @@
 			<sub-title title="典藏文物">
 
 			</sub-title>
+      <uni-row>
 			<function-btn v-for="item in artifactsList" :iconPath="item.iconPath" :functionLabel="item.functionLabel"
 				:span="8">
 			</function-btn>
+      </uni-row>
 			<watch-more-btn @tap="watchMore"></watch-more-btn>
 		</uni-card>
 	</view>

@@ -25,9 +25,15 @@
       </function-btn>
     </view>
     <watch-more-btn @tap="watchMore"></watch-more-btn>
-  </view>
 
-  <base-banner items="bannerList"></base-banner>
+
+    <base-banner
+        v-for="banner in bannerList"
+        :imgPath="banner.imgPath"
+        :title="banner.title">
+    </base-banner>
+
+  </view>
 </template>
 
 <script>
@@ -74,13 +80,17 @@ export default {
 
 
       bannerList: [{
-        img: 'https://s2.loli.net/2024/07/22/M8CdwhtqSTx6Q3F.png'
-      },{
-        img: 'https://s2.loli.net/2024/07/22/s7uJkbARGDjmEpa.png'
-      },{
-        img: 'https://s2.loli.net/2024/07/22/TwYEVt9yzKd7Fqb.png'
-      },{
-        img: 'https://s2.loli.net/2024/07/22/V3J2YxBAhs7UHni.png'
+        imgPath: 'https://s2.loli.net/2024/07/23/M8CdwhtqSTx6Q3F.png'
+        , title: "福建省博物馆"
+      }, {
+        imgPath: 'https://s2.loli.net/2024/07/23/s7uJkbARGDjmEpa.png',
+        title: "地方志"
+      }, {
+        imgPath: 'https://s2.loli.net/2024/07/23/TwYEVt9yzKd7Fqb.png'
+        , title: "统计数据公开"
+      }, {
+        imgPath: 'https://s2.loli.net/2024/07/23/V3J2YxBAhs7UHni.png'
+        , title: "文化地图"
       }]
     };
   },
@@ -130,4 +140,6 @@ scroll-view::-webkit-scrollbar {
   flex: 0 0 auto; /* 确保按钮不会拉伸 */
   margin-right: 10px; /* 按钮之间的间距 */
 }
+
+
 </style>

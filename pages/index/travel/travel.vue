@@ -7,15 +7,17 @@
     <uni-card>
       <uni-row class="functionArea">
         <function-btn
-            v-for="item in functionList"
+            v-for="(item) in functionList"
             :iconPath="item.iconPath"
             :functionLabel="item.functionLabel"
-            :span="8">
+            :span="8"
+            @tap="handleFunctionTap(item.url)"
+        >
         </function-btn>
       </uni-row>
 
       <sub-title title="精彩推荐"></sub-title>
-      <base-news v-for="item in newsList"
+      <base-news v-for="(item) in newsList"
                  :title="item.title"
                  :time="item.time"
                  :imgPath="item.imgPath"
@@ -44,7 +46,7 @@ export default {
       functionList: [{
         iconPath: 'https://s2.loli.net/2024/07/22/kPmGEx89yZsHjTW.png'
         , functionLabel: '博物馆'
-        , url: "https://www.baidu.com"
+        , url: "/pages/index/travel/museum/museum"
       }, {
         iconPath: 'https://s2.loli.net/2024/07/22/wqmTV7YL3EuhMnb.png'
         , functionLabel: '文旅景区'
@@ -79,6 +81,12 @@ export default {
     }
   },
   methods: {
+    handleFunctionTap(url) {
+      uni.navigateTo({
+        url: url,
+      })
+    },
+
     watchMore() {
       uni.navigateTo({
         url: "https://www.baidu.com"

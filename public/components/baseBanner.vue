@@ -20,6 +20,7 @@ export default {
 }
 </script>
 
+<style scoped src="/public/css/common.scss"></style>
 <style scoped>
 .base-banner {
   position: relative;
@@ -27,11 +28,6 @@ export default {
   align-items: center;
   width: 90%; /* Adjust as needed */
   margin: 30px auto;
-}
-
-.background-image {
-  width: 100%;
-  z-index: 0;
 }
 
 .view-more-text {

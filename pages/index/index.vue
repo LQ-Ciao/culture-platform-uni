@@ -8,7 +8,6 @@
       <uni-row class="functionArea">
         <function-btn
             v-for="item in functionList"
-            :key="item.iconPath"
             :iconPath="item.iconPath"
             :functionLabel="item.functionLabel"
             @tap="openExternalLink(item.url)">
@@ -31,7 +30,6 @@
       <sub-title title="最新资讯"></sub-title>
       <view class="newsCard">
         <index-news v-for="item in newsList"
-                    :key="item.title"
                     :title="item.title"
                     :imgPath="item.imgPath"
                     :url="item.url"

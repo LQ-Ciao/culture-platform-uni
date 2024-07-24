@@ -75,6 +75,13 @@
     	{
     		"navigationBarTitleText" : "公共服务"
     	}
+    },
+    {
+    	"path" : "pages/index/travel/museum/museum",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : "博物馆"
+    	}
     }
   ],
   "globalStyle": {

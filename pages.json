@@ -82,6 +82,13 @@
     	{
     		"navigationBarTitleText" : "博物馆"
     	}
+    },
+    {
+    	"path" : "pages/dataRepository/map/map",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : "文化地图"
+    	}
     }
   ],
   "globalStyle": {

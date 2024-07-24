@@ -1,5 +1,5 @@
 <template>
-  <view class="base-banner">
+  <view class="base-banner" @tap="tapHandler(this.url)">
     <image class="background-image" :src="imgPath" mode="widthFix"></image>
     <text class="view-more-text">┃ {{ title }}</text>
   </view>
@@ -15,8 +15,13 @@ export default {
     title: {
       type: String,
       default: ''
+    },
+    url: {
+      type: String,
+      default: ''
     }
-  }
+  },
+
 }
 </script>
 

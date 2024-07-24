@@ -26,11 +26,11 @@
     </view>
     <watch-more-btn @tap="watchMore"></watch-more-btn>
 
-
     <base-banner
         v-for="banner in bannerList"
         :imgPath="banner.imgPath"
-        :title="banner.title">
+        :title="banner.title"
+        @tap="bannerTapHandler(banner.url)">
     </base-banner>
 
   </view>
@@ -82,21 +82,31 @@ export default {
       bannerList: [{
         imgPath: 'https://s2.loli.net/2024/07/23/M8CdwhtqSTx6Q3F.png'
         , title: "福建省博物馆"
+        , url: ""
       }, {
         imgPath: 'https://s2.loli.net/2024/07/23/s7uJkbARGDjmEpa.png',
         title: "地方志"
+        , url: ""
       }, {
         imgPath: 'https://s2.loli.net/2024/07/23/TwYEVt9yzKd7Fqb.png'
         , title: "统计数据公开"
+        , url: ""
       }, {
         imgPath: 'https://s2.loli.net/2024/07/23/V3J2YxBAhs7UHni.png'
         , title: "文化地图"
+        , url: "/pages/dataRepository/map/map"
       }]
     };
   },
   methods: {
     selectButton(value) {
       this.selectedButton = value;
+    },
+
+    bannerTapHandler(url) {
+      uni.navigateTo({
+        url: url,
+      })
     },
 
     watchMore() {

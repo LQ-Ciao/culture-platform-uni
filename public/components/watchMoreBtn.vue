@@ -1,9 +1,20 @@
 <template>
   <view class="view-more-component">
     <image class="background-image" src="https://s2.loli.net/2024/07/22/qV1WFnfjlBzu8K5.png" mode="widthFix"></image>
-    <text class="view-more-text">查看更多</text>
+    <text class="view-more-text">{{ text }}</text>
   </view>
 </template>
+
+<script>
+export default {
+  props: {
+    text: {
+      default: '查看更多',
+      type: String
+    }
+  }
+}
+</script>
 
 <style>
 .view-more-component {

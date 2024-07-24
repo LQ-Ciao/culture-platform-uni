@@ -16,8 +16,8 @@
       </view>
     </view>
 
-    <view style="background-color: #fffbf5;height: 200px;margin: 20px 20px 20px 20px">
-      <uni-row gutter="50">
+    <view style="background-color: #fffbf5;margin: 20px 20px 20px 20px">
+      <uni-row :gutter="50">
         <uni-col :span="12">
           <count-btn
               background-image="https://s2.loli.net/2024/07/23/7rHxT9bvEDa3YUF.png"
@@ -34,23 +34,48 @@
               icon-type="star-filled"
           ></count-btn>
         </uni-col>
-
       </uni-row>
+
+      <!--菜单-->
+      <view style="margin-top: 20px">
+          <menu-item v-for="item in menuList"
+                     :icon-type="item.iconType"
+                     :menu-text="item.menuText"
+          ></menu-item>
+      </view>
+
+      <watch-more-btn text="退出登录"></watch-more-btn>
+
     </view>
   </view>
 </template>
 
 <script>
 import countBtn from "./countBtn.vue";
+import menuItem from "./menuItem.vue";
+import watchMoreBtn from "/public/components/watchMoreBtn.vue";
 
 export default {
-  components: {countBtn},
+  components: {countBtn, menuItem, watchMoreBtn},
   data() {
     return {
       defaultAvatar: 'https://s2.loli.net/2024/07/23/BqhJYG9RAFc54g7.png',
       username: "1111",
       thumbCount: 0,
       collectCount: 0,
+      menuList: [{
+        iconType: "person-filled",
+        menuText: "账号信息"
+      }, {
+        iconType: "star-filled",
+        menuText: "我的收藏"
+      }, {
+        iconType: "headphones",
+        menuText: "我的资讯"
+      }, {
+        iconType: "chat-filled",
+        menuText: "我的评论"
+      }]
     }
   }
 }

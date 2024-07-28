@@ -1,5 +1,5 @@
 <template>
-  <view class="base-banner" @tap="tapHandler(this.url)">
+  <view class="base-banner">
     <image class="background-image" :src="imgPath" mode="widthFix"></image>
     <text class="view-more-text">┃ {{ title }}</text>
   </view>

@@ -1,4 +1,5 @@
 <template>
+  <view style="margin: 20px 0 20px">
   <uni-row class="menu-item">
     <uni-col :span="1" :offset="1">
       <uni-icons :type="iconType" size="30"></uni-icons>
@@ -10,6 +11,7 @@
       <uni-icons type="forward" size="18"></uni-icons>
     </uni-col>
   </uni-row>
+  </view>
 </template>
 
 <script>

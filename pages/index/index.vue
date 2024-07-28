@@ -64,7 +64,7 @@ export default {
         , functionLabel: '红色应用'
         , url: "https://www.baidu.com"
       }, {
-        iconPath: 'https://s2.loli.net/2024/07/19/WZu84NbkofS6CLY.png'
+        iconPath: 'https://s2.loli.net/2024/07/28/tQy5hbWGuHXR82F.png'
         , functionLabel: '沉浸式文旅'
         , url: "/pages/index/travel/travel"
       }, {

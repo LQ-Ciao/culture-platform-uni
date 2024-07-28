@@ -1,7 +1,7 @@
 <template>
   <view style="padding: 20px 20px 20px 20px">
     <uni-forms :modelValue="formData">
-      <uni-row gutter="20">
+      <uni-row :gutter="20">
         <uni-col :span="10">
           <uni-data-select
               confirmType="search"

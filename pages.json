@@ -89,6 +89,13 @@
     	{
     		"navigationBarTitleText" : "文化地图"
     	}
+    },
+    {
+    	"path" : "pages/test/myTest/myTest",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : ""
+    	}
     }
   ],
   "globalStyle": {

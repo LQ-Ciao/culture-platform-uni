@@ -60,7 +60,7 @@ export default {
   data() {
     return {
       defaultAvatar: 'https://s2.loli.net/2024/07/23/BqhJYG9RAFc54g7.png',
-      username: "1111",
+      username: "用户名",
       thumbCount: 0,
       collectCount: 0,
       menuList: [{

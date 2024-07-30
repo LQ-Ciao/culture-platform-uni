@@ -96,6 +96,13 @@
     	{
     		"navigationBarTitleText" : ""
     	}
+    },
+    {
+    	"path" : "pages/index/travel/org/org",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : ""
+    	}
     }
   ],
   "globalStyle": {

@@ -5,7 +5,6 @@
         <uni-col :span="10">
           <uni-data-select
               confirmType="search"
-              v-model="areaId"
               :localdata="areaList"
               @change="change"
           ></uni-data-select>
@@ -18,6 +17,7 @@
     <base-banner v-for="item in museumList"
                  :title="item.title"
                  :imgPath="item.imgPath"
+                 @tap="tapHandler(item)"
     ></base-banner>
   </view>
 </template>
@@ -40,13 +40,10 @@ export default {
           , title: "福建省博物馆"
         }, {
           imgPath: 'https://s2.loli.net/2024/07/23/s7uJkbARGDjmEpa.png',
-          title: "地方志"
+          title: "福州市博物馆"
         }, {
           imgPath: 'https://s2.loli.net/2024/07/23/TwYEVt9yzKd7Fqb.png'
-          , title: "统计数据公开"
-        }, {
-          imgPath: 'https://s2.loli.net/2024/07/23/V3J2YxBAhs7UHni.png'
-          , title: "文化地图"
+          , title: "林则徐纪念馆"
         }],
       areaList: [
         {value: 0, text: "福州市"}
@@ -58,7 +55,14 @@ export default {
   methods: {
     change() {
 
-    }
+    },
+
+    tapHandler(museum) {
+      console.log("tapHandler")
+      uni.navigateTo({
+        url: '/pages/index/travel/org/org?title=' + museum.title,
+      })
+    },
   }
 }
 </script>

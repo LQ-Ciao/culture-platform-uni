@@ -5,10 +5,10 @@
     <scroll-view scroll-x="true" class="button-container" enhanced="true" show-scrollbar="false">
       <view class="button-wrapper">
         <button
-            :class="selectedButton === button.value ? 'selected-btn' : 'default-btn'"
-            v-for="button in buttonList"
-            :key="button.value"
-            @click="selectButton(button.value)"
+            :class="selectedButton === button.id ? 'selected-btn' : 'default-btn'"
+            v-for="(button,index) in buttonList"
+            :key="button.id"
+            @click="selectButton(button.id)"
             style="margin-right: 24px;"
             size="mini"
         >
@@ -45,15 +45,15 @@ export default {
   components: {functionBtn, watchMoreBtn, baseBanner},
   data() {
     return {
-      selectedButton: 0,
+      selectedButton: 'qwe123',
       buttonList: [
-        {label: "全部", value: 0},
-        {label: "福建方志馆", value: 1},
-        {label: "文化数据库", value: 2},
-        {label: "福建历史博物馆", value: 3},
-        {label: "历史文化", value: 4},
-        {label: "确权分组", value: 5},
-        {label: "", value: 6}
+        {label: "全部", id: '1'},
+        {label: "福建方志馆", id: '2'},
+        {label: "文化数据库", id: '3'},
+        {label: "福建历史博物馆", id: '4'},
+        {label: "历史文化", id: '5'},
+        {label: "确权分组", id: '6'},
+        {label: "", id: '7'}
       ],
 
       artifactsList: [{
@@ -98,6 +98,11 @@ export default {
       }]
     };
   },
+
+  mounted() {
+    this.selectedButton = this.buttonList[0].id;
+  },
+
   methods: {
     selectButton(value) {
       this.selectedButton = value;

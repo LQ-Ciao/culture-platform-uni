@@ -66,10 +66,12 @@ export default {
       }],
 
       artifactsList: [{
+        id: '111',
         iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
         , functionLabel: '明德化窑白釉荷叶洗'
         , url: "https://www.baidu.com"
       }, {
+        id: '222',
         iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
         , functionLabel: '明德化窑白釉荷叶洗'
         , url: "https://www.baidu.com"

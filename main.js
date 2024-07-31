@@ -1,7 +1,9 @@
 // #ifndef VUE3
 import Vue from 'vue'
 import App from './App'
+import { http } from '/api/service.js' // 全局挂载引入，配置相关在该index.js文件里修改
 
+Vue.prototype.$http = http
 Vue.config.productionTip = false
 
 App.mpType = 'app'
@@ -17,11 +19,9 @@ import {
     createSSRApp
 } from 'vue'
 import App from './App.vue'
-import uviewPlus from 'uview-plus'
 
 export function createApp() {
     const app = createSSRApp(App)
-    app.use(uviewPlus)
     return {
         app
     }

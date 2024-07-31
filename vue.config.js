@@ -1,8 +1,8 @@
 // vue.config.js
-const { defineConfig } = require('@vue/cli-service')
+const {defineConfig} = require('@vue/cli-service')
 
 module.exports = {
-    transpileDependencies: ['@dcloudio/uni-ui'],
+    transpileDependencies: ['@dcloudio/uni-ui', 'luch-request'],
 
     configureWebpack: {
         resolve: {

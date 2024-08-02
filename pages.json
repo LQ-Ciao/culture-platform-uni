@@ -116,7 +116,7 @@
   "tabBar": {
     // 设置底部 tab 的表现
     "color": "#333333",
-    "selectedColor": "green",
+    "selectedColor": "#379799",
     "borderStyle": "black",
     "backgroundColor": "#fff",
     "list": [

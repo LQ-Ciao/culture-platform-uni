@@ -1,10 +1,14 @@
 // #ifndef VUE3
 import Vue from 'vue'
 import App from './App'
-import { http } from '/api/service.js' // 全局挂载引入，配置相关在该index.js文件里修改
+import http from "/utils/request";
+// api加载
+import api from "/api/api";
 
-Vue.prototype.$http = http
 Vue.config.productionTip = false
+
+Vue.prototype.$http = http;
+Vue.prototype.$api = api;
 
 App.mpType = 'app'
 

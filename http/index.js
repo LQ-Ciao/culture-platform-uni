@@ -1,12 +1,11 @@
 import Request from 'luch-request'
 
-
 const http = new Request({
-    baseURL: "https://api.xxxxx.com/", //设置请求的base url
+    baseURL: "http://127.0.0.1:8081/admin", //设置请求的base url
     timeout: 300000, //超时时长5分钟,
-    header: {
-        'Content-Type': 'multipart/form-data;application/json;charset=UTF-8;'
-    }
+    // header: {
+    //     'Content-Type': 'multipart/form-data;application/json;charset=UTF-8;'
+    // }
 })
 
 //请求拦截器
@@ -27,7 +26,7 @@ http.interceptors.request.use((config) => { // 可使用async await 做异步操
 // 响应拦截器
 http.interceptors.response.use((response) => {
     console.log(response)
-    return response
+    return response.data
 }, (error) => {
     //未登录时清空缓存跳转
     if (error.statusCode == 401) {

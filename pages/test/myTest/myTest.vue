@@ -3,21 +3,21 @@
     <button @tap="">uni原生request</button>
     <button @tap="fetchData">axios</button>
     <button @tap="lunchHandler">lunch-request-test</button>
-    <text>{{ requestResult }}</text>
+    <button @tap="paramTest">lunch-request-param-test</button>
+    <button @tap="postTest">lunch-request-post</button>
+    <button @tap="removeTest">lunch-request-remove</button>
   </view>
 
 </template>
 
 <script>
 
-import { apiTest } from "@/api/index";
+import { apiTest,paramTest,postTest,removeTest } from "@/api/index";
 
 export default {
 
   data() {
-    return {
-      requestResult: '',
-    }
+
   },
 
   methods: {
@@ -28,7 +28,46 @@ export default {
       }).catch((error)=>{
         console.log(error);
       })
+    },
+
+    paramTest() {
+      var param = {
+        id: '1',
+        name: '用户',
+      }
+      paramTest(param).then((res)=>{
+        console.log('res.data = ' + res.data);
+        console.log(res);
+      }).catch((error)=>{
+        console.log(error);
+      })
+    },
+
+    postTest() {
+      var param = {
+        id: '1',
+        name: '用户',
+      }
+      postTest(param).then((res)=>{
+        console.log('res.data = ' + res.data);
+        console.log(res);
+      }).catch((error)=>{
+        console.log(error);
+      })
+    },
+
+    removeTest() {
+      var param = {
+        id: '1',
+      }
+      removeTest(param).then((res)=>{
+        console.log('res.data = ' + res.data);
+        console.log(res);
+      }).catch((error)=>{
+        console.log(error);
+      })
     }
+
   },
 }
 </script>

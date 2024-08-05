@@ -1,9 +1,9 @@
 // #ifndef VUE3
 import Vue from 'vue'
 import App from './App'
-import http from "/utils/request";
+import http from "@/utils/request";
 // api加载
-import api from "/api/api";
+import api from "@/api/api";
 
 Vue.config.productionTip = false
 

@@ -6,13 +6,14 @@
     <button @tap="paramTest">lunch-request-param-test</button>
     <button @tap="postTest">lunch-request-post</button>
     <button @tap="removeTest">lunch-request-remove</button>
+    <button @tap="globalTest">globalTest</button>
   </view>
 
 </template>
 
 <script>
 
-import { apiTest,paramTest,postTest,removeTest } from "@/api/index";
+import {apiTest, paramTest, postTest, removeTest} from "@/api/index";
 
 export default {
 
@@ -22,23 +23,31 @@ export default {
 
   methods: {
     lunchHandler() {
-      apiTest().then((res)=>{
+      apiTest().then((res) => {
         console.log('res.data = ' + res.data);
         console.log(res);
-      }).catch((error)=>{
+      }).catch((error) => {
         console.log(error);
       })
     },
+
+    globalTest() {
+      this.$api.testOperate({}, 0).then(res => {
+        console.log('res.data = ' + res.data);
+        console.log(res);
+      })
+    },
+
 
     paramTest() {
       var param = {
         id: '1',
         name: '用户',
       }
-      paramTest(param).then((res)=>{
+      paramTest(param).then((res) => {
         console.log('res.data = ' + res.data);
         console.log(res);
-      }).catch((error)=>{
+      }).catch((error) => {
         console.log(error);
       })
     },
@@ -48,10 +57,10 @@ export default {
         id: '1',
         name: '用户',
       }
-      postTest(param).then((res)=>{
+      postTest(param).then((res) => {
         console.log('res.data = ' + res.data);
         console.log(res);
-      }).catch((error)=>{
+      }).catch((error) => {
         console.log(error);
       })
     },
@@ -60,10 +69,10 @@ export default {
       var param = {
         id: '1',
       }
-      removeTest(param).then((res)=>{
+      removeTest(param).then((res) => {
         console.log('res.data = ' + res.data);
         console.log(res);
-      }).catch((error)=>{
+      }).catch((error) => {
         console.log(error);
       })
     }

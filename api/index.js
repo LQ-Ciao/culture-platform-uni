@@ -1,11 +1,17 @@
+import {get, post, del, put} from '/http/index'
 
-import request from '../http/index'
+export const apiTest = (obj) => get("/test", obj)
 
+export const paramTest = (data) => get("/paramTest", data)
 
-export const apiTest = () => request.getData("/test", obj)
+export const postTest = (data) => post('postTest', data);
 
-export const paramTest = (data) => request.getData("/paramTest", data)
+export const removeTest = (data) => del('remove/{}' + data.id)
 
-export const postTest = (data) => request.postData('postTest',data);
-
-export const removeTest = (data) => request.deleteData('remove/' + data.id)
+export default {
+    testApi:
+        {0: '/test'},
+    testOperate(data = {}, type = 0) {
+        if (type === 0) return get(this.testApi[0], data);
+    }
+}

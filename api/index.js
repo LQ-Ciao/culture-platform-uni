@@ -1,4 +1,4 @@
-import {get, post, del, put} from '/http/index'
+import {get, post, del, put} from '/utils/request'
 
 export const apiTest = (obj) => get("/test", obj)
 

@@ -1,36 +1,82 @@
-// request.js
-import Request from 'luch-request';
+import Request from 'luch-request'
 
-const http = new Request();
+const http = new Request({
+    baseURL: "http://127.0.0.1:8081/admin", //设置请求的base url
+    timeout: 300000, //超时时长5分钟,
+    // header: {
+    //     'Content-Type': 'multipart/form-data;application/json;charset=UTF-8;'
+    // }
+})
 
-http.setConfig((config) => {
-    config.baseURL = 'http://127.0.0.1/8081/admin'; // 设置请求的base URL
-    config.timeout = 10000; // 设置请求超时时间
-    config.header = {
-        'Content-Type': 'application/json',
-    };
-    return config;
-});
-
-// 请求拦截器
-http.interceptors.request.use((config) => {
-    // 在发送请求之前做些什么，比如添加token
+//请求拦截器
+http.interceptors.request.use((config) => { // 可使用async await 做异步操作
     const token = uni.getStorageSync('token');
     if (token) {
-        config.header.Authorization = `Bearer ${token}`;
+        config.headers.common["Authorization"] = token;
     }
-    return config;
-}, (config) => {
-    return Promise.reject(config);
-});
+
+    if (config.method === 'POST') {
+        config.data = JSON.stringify(config.data);
+    }
+    return config
+}, error => {
+    return Promise.resolve(error)
+})
 
 // 响应拦截器
 http.interceptors.response.use((response) => {
-    // 对响应数据做点什么
-    return response.data;
-}, (response) => {
-    // 对响应错误做点什么
-    return Promise.reject(response);
-});
+    console.log(response)
+    return response.data
+}, (error) => {
+    //未登录时清空缓存跳转
+    if (error.statusCode == 401) {
+        uni.clearStorageSync();
+        uni.switchTab({
+            url: "/pages/index/index.vue"
+        })
+    }
+    return Promise.resolve(error)
+})
 
-export default http;
+export default {
+    // get请求 可以拼接url或者传入数据对象 二选一
+    getData(url, data) {
+        // 传入的data对象  {name:'abc'};
+        return http.get(url, {params: data});
+    },
+    // post请求
+    postData(url, data) {
+        // 传入的data对象  {name:'abc'};
+        return http.post(url, data);
+    },
+    // put请求
+    putData(url, data) {
+        // 传入的data对象  {name:'abc'};
+        return http.put(url, data);
+    },
+    // delete请求
+    deleteData(url, data) {
+        // 传入的data对象  {name:'abc'};
+        return http.delete(url, data);
+    }
+}
+
+export function get(url, data) {
+    // 传入的data对象  {name:'abc'};
+    return http.get(url, {params: data});
+}
+
+export function post(url, data) {
+    // 传入的data对象  {name:'abc'};
+    return http.put(url, data);
+}
+
+export function put(url, data) {
+    // 传入的data对象  {name:'abc'};
+    return http.put(url, data);
+}
+
+export function del(url, data) {
+    // 传入的data对象  {name:'abc'};
+    return http.delete(url, data);
+}

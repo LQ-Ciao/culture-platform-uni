@@ -1,14 +1,13 @@
 // #ifndef VUE3
 import Vue from 'vue'
 import App from './App'
-import http from "@/utils/request";
+// http加载
+import {http} from '@/utils/request.js'
 // api加载
-import api from "/api/index";
-
+import {api} from "@/api/api.js";
 
 Vue.config.productionTip = false
-
-// Vue.prototype.$http = http;
+Vue.prototype.$http = http;
 Vue.prototype.$api = api;
 
 App.mpType = 'app'
@@ -23,7 +22,6 @@ app.$mount()
 import {
     createSSRApp
 } from 'vue'
-import App from './App.vue'
 
 export function createApp() {
     const app = createSSRApp(App)

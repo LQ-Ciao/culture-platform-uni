@@ -1,5 +1,5 @@
 <template>
-  <uni-col :span="span" @click="this.handelClick">
+  <uni-col :span="span">
     <view class="centered">
       <image :src="iconPath" mode="widthFix" class="function-icon"/>
     </view>
@@ -28,9 +28,7 @@ export default {
     }
   },
   methods: {
-    handelClick() {
-      this.$emit('click');
-    }
+
   }
 }
 

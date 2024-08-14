@@ -48,6 +48,8 @@
 import functionBtn from "./functionBtn.vue";
 import subTitle from "./subTitle.vue";
 import indexNews from "./indexNews.vue";
+import { tapHandler } from '/utils/functionTapHandler.js';
+
 
 export default {
   components: {
@@ -64,7 +66,7 @@ export default {
       }, {
         iconPath: 'https://s2.loli.net/2024/07/19/sDp3dKFHRCujLMf.png'
         , functionLabel: '红色应用'
-        , url: "0"
+        , url: '0'
       }, {
         iconPath: 'https://s2.loli.net/2024/07/28/tQy5hbWGuHXR82F.png'
         , functionLabel: '沉浸式文旅'
@@ -125,23 +127,7 @@ export default {
 
   methods: {
     tapHandler(item) {
-      if (item.type === '0') {
-        uni.navigateTo({
-          url: item.url,
-        })
-      }
-
-      if (item.type === '1') {
-        uni.switchTab({
-          url: item.url
-        })
-      }
-    },
-
-    myTest() {
-      uni.navigateTo({
-        url: '/pages/test/myTest/myTest',
-      })
+      tapHandler(item);
     },
 
     toAreaThematic() {

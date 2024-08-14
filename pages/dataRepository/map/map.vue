@@ -3,6 +3,7 @@
     <uni-row :gutter="50">
       <uni-col :span="12"
                v-for="item in areaList"
+               @tap="tapHandler(item)"
       >
         <area-option :text="item.label"></area-option>
       </uni-col>
@@ -19,14 +20,37 @@ export default {
   data() {
     return {
       areaList: [
-        {label: '福州市'}
-        , {label: '厦门市'}
-        , {label: '莆田市'}
-        , {label: '三明市'}
+        {label: '福州市', url: 'https://wlj.fuzhou.gov.cn/'}
+        , {label: '厦门市', url: 'https://wlj.xm.gov.cn/'}
+        , {label: '漳州市', url: 'http://wlj.zhangzhou.gov.cn/'}
+        , {label: '泉州市', url: 'http://cbtb.quanzhou.gov.cn/'}
+        , {label: '三明市', url: 'http://wlj.sm.gov.cn/?mobile=1'}
+        , {label: '南平市', url: 'https://whlyj.np.gov.cn/'}
+        , {label: '龙岩市', url: 'https://wlj.longyan.gov.cn/'}
+        , {label: '莆田市', url: ''}
+        , {label: '宁德市', url: 'https://wlj.ningde.gov.cn/'}
+        , {label: '平潭市', url: 'https://lfw.pingtan.gov.cn/'}
       ]
     }
   },
-  methods: {}
+  methods: {
+    tapHandler(item) {
+      if (item.url === '' || item.url == null) {
+        uni.showToast({
+          title: '暂未开通',
+          icon: 'error'
+        })
+        return
+      }
+      uni.navigateTo({
+        url: '/pages/test/test?url=' + item.url
+      })
+
+
+    }
+
+
+  }
 }
 </script>
 
@@ -37,6 +61,6 @@ export default {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 800px;
 }
 </style>

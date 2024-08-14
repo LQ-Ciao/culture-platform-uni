@@ -62,21 +62,17 @@ http.interceptors.response.use((response) => {
 // }
 
 export function get(url, data) {
-    // 传入的data对象  {name:'abc'};
     return http.get(url, {params: data});
 }
 
 export function post(url, data) {
-    // 传入的data对象  {name:'abc'};
     return http.put(url, data);
 }
 
 export function put(url, data) {
-    // 传入的data对象  {name:'abc'};
     return http.put(url, data);
 }
 
 export function del(url, data) {
-    // 传入的data对象  {name:'abc'};
     return http.delete(url, data);
 }

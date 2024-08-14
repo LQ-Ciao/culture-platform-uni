@@ -1,6 +1,6 @@
 <template>
   <view>
-    <button @tap="myTest">test</button>
+    <!--    <button @tap="myTest">test</button>-->
     <image style="width: 100%" mode="widthFix"
            src="https://s2.loli.net/2024/07/22/bQIWnFacmwJDB45.png">
     </image>
@@ -11,7 +11,7 @@
             v-for="item in functionList"
             :iconPath="item.iconPath"
             :functionLabel="item.functionLabel"
-            @tap="openExternalLink(item.url)">
+            @tap="tapHandler(item)">
         </function-btn>
       </uni-row>
 
@@ -60,34 +60,41 @@ export default {
         iconPath: 'https://s2.loli.net/2024/07/19/QwlOnstkNbePMZ3.png'
         , functionLabel: '红色文化'
         , url: "https://www.baidu.com"
+        , type: '0'
       }, {
         iconPath: 'https://s2.loli.net/2024/07/19/sDp3dKFHRCujLMf.png'
         , functionLabel: '红色应用'
-        , url: "https://www.baidu.com"
+        , url: "0"
       }, {
         iconPath: 'https://s2.loli.net/2024/07/28/tQy5hbWGuHXR82F.png'
         , functionLabel: '沉浸式文旅'
         , url: "/pages/index/travel/travel"
+        , type: '0'
       }, {
         iconPath: 'https://s2.loli.net/2024/07/19/hy5cGF8BAwp2sJl.png'
         , functionLabel: '闽文数仓'
-        , url: "https://www.baidu.com"
+        , url: "/pages/dataRepository/dataRepository"
+        , type: '1'
       }, {
         iconPath: 'https://s2.loli.net/2024/07/19/ycKJdGNYPsVnLSw.png'
         , functionLabel: '数字资产'
         , url: "https://www.baidu.com"
+        , type: '0'
       }, {
         iconPath: 'https://s2.loli.net/2024/07/19/YNlfD58joOxASXZ.png'
         , functionLabel: '闽文博藏'
         , url: "https://www.baidu.com"
+        , type: '0'
       }, {
         iconPath: 'https://s2.loli.net/2024/07/19/mC8dnp4SJvc2PhI.png'
         , functionLabel: '闽文资讯'
         , url: "https://www.baidu.com"
+        , type: '0'
       }, {
         iconPath: 'https://s2.loli.net/2024/07/19/vodyLAZVDOa9Fwr.png'
         , functionLabel: '更多'
         , url: "https://www.baidu.com"
+        , type: '0'
       }],
 
       recentNewsList: [{
@@ -117,10 +124,18 @@ export default {
   },
 
   methods: {
-    openExternalLink(url) {
-      uni.navigateTo({
-        url: url,
-      })
+    tapHandler(item) {
+      if (item.type === '0') {
+        uni.navigateTo({
+          url: item.url,
+        })
+      }
+
+      if (item.type === '1') {
+        uni.switchTab({
+          url: item.url
+        })
+      }
     },
 
     myTest() {

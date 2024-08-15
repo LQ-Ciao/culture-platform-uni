@@ -28,7 +28,7 @@
 
 <script>
 import functionBtn from "../index/functionBtn.vue";
-import {tapHandler} from '/utils/functionTapHandler.js';
+import {functionBtnHandler} from '/utils/functionBtnHandler.js';
 
 export default {
   components: {
@@ -66,7 +66,7 @@ export default {
   },
   methods: {
     tapHandler(item) {
-      tapHandler(item)
+      functionBtnHandler(item)
     }
 
   }

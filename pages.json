@@ -103,6 +103,20 @@
     	{
     		"navigationBarTitleText" : ""
     	}
+    },
+    {
+    	"path" : "pages/index/redApplications/redApplications",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : ""
+    	}
+    },
+    {
+    	"path" : "pages/index/org/org",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : "文博场馆"
+    	}
     }
   ],
   "globalStyle": {

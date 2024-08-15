@@ -101,14 +101,14 @@
     	"path" : "pages/index/travel/org/org",
     	"style" : 
     	{
-    		"navigationBarTitleText" : ""
+    		"navigationBarTitleText" : "场馆介绍"
     	}
     },
     {
     	"path" : "pages/index/redApplications/redApplications",
     	"style" : 
     	{
-    		"navigationBarTitleText" : ""
+    		"navigationBarTitleText" : "红色应用"
     	}
     },
     {

@@ -51,7 +51,7 @@ export default {
   data() {
     return {
       museumList: [
-        {title: '福建省博物院', url: 'https://www.fjbwy.com',},
+        {title: '福建省博物院', url: 'https://museum.fjsen.com',},
         {title: '泉州海外交通史博物馆', url: 'http://www.qzhjg.cn/wap/index.html'}
       ],
       memorialList: [
@@ -64,7 +64,7 @@ export default {
       ],
       libraryList: [
         {title: '福建省图书馆', url: 'https://www.fjlib.net'},
-        {title: '福建省少年儿童图书馆', url: 'http://www.fjclib.net'}
+        {title: '福建省少年儿童图书馆', url: 'http://116.62.208.130:8080'}
       ]
 
     }

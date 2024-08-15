@@ -1,6 +1,6 @@
 // utils.js
 export function functionBtnHandler(item) {
-    if(item.url === '' || item.url === null) {
+    if (item.url === '' || item.url === null) {
         notNow();
     }
 
@@ -11,9 +11,13 @@ export function functionBtnHandler(item) {
     if (item.type === '1') {
         toTabbar(item);
     }
+
+    if (item.type === '2') {
+        toLink(item);
+    }
 }
 
-export function notNow(){
+export function notNow() {
     uni.showToast({
         title: '暂未开通',
         icon: 'error'

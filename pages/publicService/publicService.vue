@@ -42,6 +42,11 @@ export default {
         , url: "/pages/dataRepository/map/map"
         , type: '0'
       }, {
+        iconPath: 'https://s2.loli.net/2024/07/23/siKDGgq7pvQ9zlw.png',
+        functionLabel: '游客分享',
+        url: ""
+        , type: '0'
+      }, {
         iconPath: 'https://s2.loli.net/2024/07/23/l2gHMEeWdGrVjzR.png'
         , functionLabel: '沉浸式文旅'
         , url: "/pages/index/travel/travel"
@@ -54,12 +59,7 @@ export default {
       }, {
         iconPath: 'https://s2.loli.net/2024/07/23/UWLtNJOyhSzki7o.png',
         functionLabel: '景区服务',
-        url: ""
-        , type: '0'
-      }, {
-        iconPath: 'https://s2.loli.net/2024/07/23/siKDGgq7pvQ9zlw.png',
-        functionLabel: '游客分享',
-        url: ""
+        url: "/pages/index/org/org"
         , type: '0'
       }],
     }

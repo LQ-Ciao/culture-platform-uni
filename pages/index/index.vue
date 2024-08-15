@@ -60,7 +60,7 @@ export default {
       loading: false,
       functionList: [{
         iconPath: 'https://s2.loli.net/2024/07/19/QwlOnstkNbePMZ3.png'
-        , functionLabel: '红色文化'
+        , functionLabel: '文化精品'
         , url: ""
         , type: '0'
       }, {
@@ -91,8 +91,8 @@ export default {
       }, {
         iconPath: 'https://s2.loli.net/2024/07/19/mC8dnp4SJvc2PhI.png'
         , functionLabel: '闽文资讯'
-        , url: ""
-        , type: '0'
+        , url: "https://wlt.fujian.gov.cn/wldt/btdt/"
+        , type: '2'
       }, {
         iconPath: 'https://s2.loli.net/2024/07/19/vodyLAZVDOa9Fwr.png'
         , functionLabel: '更多'

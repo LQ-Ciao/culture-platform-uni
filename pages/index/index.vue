@@ -61,7 +61,7 @@ export default {
       functionList: [{
         iconPath: 'https://s2.loli.net/2024/07/19/QwlOnstkNbePMZ3.png'
         , functionLabel: '文化精品'
-        , url: ""
+        , url: "/pages/index/artworks/artworks"
         , type: '0'
       }, {
         iconPath: 'https://s2.loli.net/2024/07/19/sDp3dKFHRCujLMf.png'

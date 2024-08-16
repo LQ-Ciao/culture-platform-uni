@@ -117,6 +117,13 @@
     	{
     		"navigationBarTitleText" : "文博场馆"
     	}
+    },
+    {
+    	"path" : "pages/index/artworks/artworks",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : "文化精品"
+    	}
     }
   ],
   "globalStyle": {

@@ -19,8 +19,6 @@ export default {
       console.log('localTest');
 
       api.testOperate({}, 0).then(res => {
-        console.log('res.data = ' + res.data);
-        console.log(res);
       })
     },
 

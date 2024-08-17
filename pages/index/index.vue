@@ -111,16 +111,16 @@ export default {
       }],
 
       newsList: [{
-        title: '福建广电网络集团举办深化运用“四下基层”制度推进乡村征信服务团balabalabala',
-        imgPath: 'https://s2.loli.net/2024/07/22/qv45WI9rpmkYNug.png',
-        url: 'www.baidu.com',
-        time: '2024-07-22',
+        title: '福建成为启动地！CHC影迷电影频道地域人文电影展播发布会成功举办',
+        imgPath: 'https://www.fjgdwl.com/upload/202408/15/202408151014570795.jpg',
+        url: 'https://www.fjgdwl.com/news/show-30098.aspx',
+        time: '2024-08-15',
         newsType: '文化动态',
       }, {
-        title: '福建广电网络集团举办深化运用“四下基层”制度推进乡村征信服务团balabalabala',
-        imgPath: 'https://s2.loli.net/2024/07/22/qv45WI9rpmkYNug.png',
-        url: '',
-        time: '2024-07-22',
+        title: '福建广电网络集团召开上半年经营分析会暨安全生产工作会议',
+        imgPath: 'https://www.fjgdwl.com/upload/202407/31/202407311715585565.png',
+        url: 'https://www.fjgdwl.com/news/show-30022.aspx',
+        time: '2024-07-30',
         newsType: '文化动态',
       }]
     }

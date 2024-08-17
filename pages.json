@@ -23,7 +23,7 @@
     {
       "path": "pages/inquiry/inquiry",
       "style": {
-        "navigationBarTitleText": "闽文咨询"
+        "navigationBarTitleText": "闽文资讯"
       }
     },
     {
@@ -155,7 +155,7 @@
         "selectedIconPath": "static/icon/tabBar/Data warehouse_push.png"
       },
       {
-        "text": "闽文咨询",
+        "text": "闽文资讯",
         "pagePath": "pages/inquiry/inquiry",
         "iconPath": "static/icon/tabBar/consulting_normal.png",
         "selectedIconPath": "static/icon/tabBar/consulting_push.png"

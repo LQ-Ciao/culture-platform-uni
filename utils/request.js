@@ -25,7 +25,6 @@ http.interceptors.request.use((config) => { // 可使用async await 做异步操
 
 // 响应拦截器
 http.interceptors.response.use((response) => {
-    console.log(response)
     return response.data
 }, (error) => {
     //未登录时清空缓存跳转

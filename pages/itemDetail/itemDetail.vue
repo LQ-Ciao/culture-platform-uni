@@ -114,8 +114,6 @@ export default {
   onLoad(options) {
     this.id = options.id;
     this.name = options.name;
-    console.log(this.id);
-    console.log(this.name);
 
   },
 

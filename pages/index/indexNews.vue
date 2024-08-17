@@ -1,6 +1,6 @@
 <template>
   <view  @tap="toNewsPage">
-    <image :src="this.imgPath" mode="widthFix"></image>
+    <image :src="this.imgPath" mode="widthFix" style="width: 100%"></image>
     <text>{{ this.title }}</text>
     <uni-row justify="space-between">
       <uni-col :span="12">

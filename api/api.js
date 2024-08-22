@@ -27,7 +27,7 @@ export default {
 
     // 获取文化资源详情
     getCulturalResources(data) {
-        return get("/getCulturalResources", data);
+        return post("/getCulturalResources", data);
     },
 
     // 获取文物资源信息

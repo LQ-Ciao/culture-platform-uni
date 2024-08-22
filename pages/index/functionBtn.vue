@@ -1,7 +1,7 @@
 <template>
   <uni-col :span="span">
     <view class="centered">
-      <image :src="iconPath" mode="widthFix" class="function-icon"/>
+      <image :src="this.getImg(iconPath)" mode="heightFix" class="function-icon"/>
     </view>
     <br/>
     <label class="centered-label">{{ functionLabel }}</label>
@@ -11,10 +11,12 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+      defaultImg: 'https://s2.loli.net/2024/08/22/7owOED1UZWIz5FP.gif',
+    }
   },
   props: {
-    span:{
+    span: {
       type: Number,
       default: 6
     },
@@ -28,7 +30,12 @@ export default {
     }
   },
   methods: {
-
+    getImg(iconPath) {
+      if (iconPath === '' || iconPath === null) {
+        return this.defaultImg;
+      }
+      return iconPath;
+    }
   }
 }
 
@@ -48,8 +55,8 @@ export default {
 }
 
 .function-icon {
-  width: 100%;
-  padding: 0 10px 0 10px ;
+  height: 50px;
+  padding: 0 10px 0 10px;
 }
 
 .centered {

@@ -5,8 +5,8 @@
     <scroll-view scroll-x="true" class="button-container" enhanced="true" show-scrollbar="false">
       <view class="button-wrapper">
         <button
-            :class="selectedButton === button.id ? 'selected-btn' : 'default-btn'"
-            v-for="(button,index) in buttonList"
+            :class="topicId === button.id ? 'selected-btn' : 'default-btn'"
+            v-for="(button) in buttonList"
             :key="button.id"
             @click="selectButton(button.id)"
             style="margin-right: 24px;"
@@ -17,14 +17,21 @@
       </view>
     </scroll-view>
     <view style="padding: 20px 20px 0 20px">
-      <function-btn
-          v-for="item in artifactsList"
-          :iconPath="item.img"
-          :functionLabel="item.name"
-          :span="8">
-      </function-btn>
+      <uni-row class="functionArea">
+        <function-btn
+            v-for="item in artifactsList"
+            :iconPath="item.img"
+            :functionLabel="item.name"
+            :span="12">
+        </function-btn>
+      </uni-row>
     </view>
-    <watch-more-btn @tap="watchMore"></watch-more-btn>
+
+    <uni-row>
+      <uni-col>
+        <watch-more-btn @tap="watchMore"></watch-more-btn>
+      </uni-col>
+    </uni-row>
 
     <base-banner
         v-for="banner in bannerList"
@@ -46,7 +53,7 @@ export default {
   components: {functionBtn, watchMoreBtn, baseBanner},
   data() {
     return {
-      selectedButton: 'qwe123',
+      topicId: null,
       buttonList: [],
       // artifactsList:[],
       artifactsList: [{
@@ -54,16 +61,16 @@ export default {
         , name: '明德化窑白釉荷叶洗'
         , url: ""
       }, {
-        img: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
-        , name: '明德化窑白釉荷叶洗'
+        img: 'https://s2.loli.net/2024/08/17/LkhJiNMuoPHlmfb.png'
+        , name: '南宋鎏金银碗'
         , url: ""
       }, {
-        img: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
-        , name: '明德化窑白釉荷叶洗'
+        img: 'https://s2.loli.net/2024/08/17/AHQY2zhxvqLcKoT.png'
+        , name: '清景德镇窑粉彩瓜果碗'
         , url: ""
       }, {
-        img: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
-        , name: '明德化窑白釉荷叶洗'
+        img: 'https://s2.loli.net/2024/08/17/o6qCXPBmfZbM9rv.png'
+        , name: '明德化窑十八手准提道人像'
         , url: ""
       }, {
         img: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
@@ -94,7 +101,7 @@ export default {
 
   mounted() {
     this.getTopic();
-    // this.getCulturalResources();
+    this.getCulturalRelics();
   },
 
   methods: {
@@ -102,14 +109,23 @@ export default {
       api.getTopics({}).then(res => {
         if (res.code === 0) {
           this.buttonList = res.result;
-          this.buttonList.unshift({name: "全部", id: '0'});
-          this.selectedButton = this.buttonList[0].id;
+          this.buttonList.unshift({name: "全部", id: null});
+          // 取前6个
+          this.buttonList = this.buttonList.slice(0, 6);
+
+          console.log('buttonList =>' + this.buttonList)
+
+          this.topicId = this.buttonList[0].id;
         }
       })
     },
 
-    getCulturalResources() {
-      api.getCulturalResources({}).then(res => {
+    getCulturalRelics() {
+      var param = {
+        "topic_id": this.topicId,
+      }
+      console.log(param);
+      api.getCulturalRelics(param).then(res => {
         if (res.code === 0) {
           this.artifactsList = res.result;
         }
@@ -117,7 +133,8 @@ export default {
     },
 
     selectButton(value) {
-      this.selectedButton = value;
+      this.topicId = value;
+      this.getCulturalRelics();
     },
 
     bannerTapHandler(url) {
@@ -133,6 +150,7 @@ export default {
 };
 </script>
 
+<style scoped src="/public/css/common.scss"></style>
 <style>
 .button-container {
   display: flex;

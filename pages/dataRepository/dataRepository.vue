@@ -55,29 +55,28 @@ export default {
     return {
       topicId: null,
       buttonList: [],
-      // artifactsList:[],
-      artifactsList: [{
-        img: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
-        , name: '明德化窑白釉荷叶洗'
-        , url: ""
-      }, {
-        img: 'https://s2.loli.net/2024/08/17/LkhJiNMuoPHlmfb.png'
-        , name: '南宋鎏金银碗'
-        , url: ""
-      }, {
-        img: 'https://s2.loli.net/2024/08/17/AHQY2zhxvqLcKoT.png'
-        , name: '清景德镇窑粉彩瓜果碗'
-        , url: ""
-      }, {
-        img: 'https://s2.loli.net/2024/08/17/o6qCXPBmfZbM9rv.png'
-        , name: '明德化窑十八手准提道人像'
-        , url: ""
-      }, {
-        img: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
-        , name: '明德化窑白釉荷叶洗'
-        , url: ""
-      }],
-
+      artifactsList: [],
+      // artifactsList: [{
+      //   img: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
+      //   , name: '明德化窑白釉荷叶洗'
+      //   , url: ""
+      // }, {
+      //   img: 'https://s2.loli.net/2024/08/17/LkhJiNMuoPHlmfb.png'
+      //   , name: '南宋鎏金银碗'
+      //   , url: ""
+      // }, {
+      //   img: 'https://s2.loli.net/2024/08/17/AHQY2zhxvqLcKoT.png'
+      //   , name: '清景德镇窑粉彩瓜果碗'
+      //   , url: ""
+      // }, {
+      //   img: 'https://s2.loli.net/2024/08/17/o6qCXPBmfZbM9rv.png'
+      //   , name: '明德化窑十八手准提道人像'
+      //   , url: ""
+      // }, {
+      //   img: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
+      //   , name: '明德化窑白釉荷叶洗'
+      //   , url: ""
+      // }],
 
       bannerList: [{
         imgPath: 'https://s2.loli.net/2024/07/23/M8CdwhtqSTx6Q3F.png'
@@ -110,10 +109,6 @@ export default {
         if (res.code === 0) {
           this.buttonList = res.result;
           this.buttonList.unshift({name: "全部", id: null});
-          // 取前6个
-          this.buttonList = this.buttonList.slice(0, 6);
-
-          console.log('buttonList =>' + this.buttonList)
 
           this.topicId = this.buttonList[0].id;
         }
@@ -124,10 +119,16 @@ export default {
       var param = {
         "topic_id": this.topicId,
       }
-      console.log(param);
       api.getCulturalRelics(param).then(res => {
         if (res.code === 0) {
           this.artifactsList = res.result;
+
+          for (var i = 0; i < this.artifactsList.length; i++) {
+            let imgPath = this.artifactsList[i].img;
+            imgPath = imgPath.replace("http://", "https://");
+
+            this.artifactsList[i].img = imgPath;
+          }
         }
       })
     },

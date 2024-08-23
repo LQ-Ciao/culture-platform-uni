@@ -1,11 +1,12 @@
 import Request from 'luch-request'
 
 const http = new Request({
-    baseURL: "http://192.168.154.70:81/MiniproApi", //设置请求的base url
-    timeout: 300000, //超时时长5分钟,
-    // header: {
-    //     'Content-Type': 'multipart/form-data;application/json;charset=UTF-8;'
-    // }
+    baseURL: "https://192-168-154-7181-9p3p97oc71mow1.ztna-dingtalk.com/MiniproApi",
+    // baseURL: "http://192.168.154.70:81/MiniproApi",
+    timeout: 30000,
+    header: {
+        'Content-Type': 'multipart/form-data;application/json;charset=UTF-8;'
+    }
 })
 
 //请求拦截器

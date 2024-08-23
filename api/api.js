@@ -32,7 +32,7 @@ export default {
 
     // 获取文物资源信息
     getCulturalRelics(data) {
-        return get("/getCulturalRelics", data);
+        return post("/getCulturalRelics", data);
     },
 
     // 获取用户信息

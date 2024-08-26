@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="contain">
     <uni-card>
       <image src="/static/icon/title_bg.png" style="width: 25px" mode="widthFix"></image>
       <text style="font-size: 25px"> 博物馆</text>
@@ -77,6 +77,5 @@ export default {
 }
 </script>
 
-<style>
+<style scoped src="/public/css/common.scss"></style>
 
-</style>

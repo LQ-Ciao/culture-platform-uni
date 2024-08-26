@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="contain">
 		<uni-card>
       <view style="padding: 20px 20px 0 20px">
         <function-btn
@@ -61,6 +61,7 @@
 	}
 </script>
 
+<style scoped src="/public/css/common.scss"></style>
 <style lang="scss">
 .button-container {
   display: flex;

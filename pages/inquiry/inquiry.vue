@@ -1,5 +1,5 @@
 <template>
-  <view style="background: #fffbf5">
+  <view style="background: #fffbf5" class="contain">
     <view class="head-control">
       <uni-segmented-control
           style-type="text"
@@ -115,6 +115,7 @@ export default {
 };
 </script>
 
+<style scoped src="/public/css/common.scss"></style>
 <style scoped>
 .defaultMargin {
   margin: 24px;

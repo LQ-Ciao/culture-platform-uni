@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="contain">
     <!--    <button @tap="myTest">test</button>-->
     <image style="width: 100%" mode="widthFix"
            src="https://s2.loli.net/2024/07/22/bQIWnFacmwJDB45.png">
@@ -48,7 +48,7 @@
 import functionBtn from "./functionBtn.vue";
 import subTitle from "./subTitle.vue";
 import indexNews from "./indexNews.vue";
-import { functionBtnHandler } from '/utils/functionBtnHandler.js';
+import {functionBtnHandler} from '/utils/functionBtnHandler.js';
 
 
 export default {
@@ -152,6 +152,7 @@ export default {
   background-color: #fbf4e8;
   border-radius: 10px;
 }
+
 
 
 </style>

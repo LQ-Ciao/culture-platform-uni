@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="contain">
     <view>
       <base-banner
           v-for="banner in bannerList"
@@ -35,6 +35,5 @@ export default {
 }
 </script>
 
-<style>
+<style scoped src="/public/css/common.scss"></style>
 
-</style>

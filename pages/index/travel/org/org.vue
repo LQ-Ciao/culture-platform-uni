@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="contain">
     <image src="https://s2.loli.net/2024/07/29/Pn9Vc6Dm1wjRS7K.png" style="width: 100%" mode="widthFix"></image>
 
     <uni-card>
@@ -94,6 +94,7 @@ export default {
 }
 </script>
 
+<style scoped src="/public/css/common.scss"></style>
 <style>
 .view-more-component {
   position: relative;

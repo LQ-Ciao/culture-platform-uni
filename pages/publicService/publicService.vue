@@ -1,5 +1,5 @@
 <template>
-  <view style="background-color: #fffbf5">
+  <view style="background-color: #fffbf5" class="contain">
     <uni-card>
       <image src="/static/icon/title_bg.png" style="width: 25px" mode="widthFix"></image>
       <text style="font-size: 25px"> 文旅服务</text>
@@ -73,6 +73,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style scoped src="/public/css/common.scss"></style>

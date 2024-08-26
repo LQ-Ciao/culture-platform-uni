@@ -23,6 +23,18 @@
 }
 
 .background-image {
-   width: 100%;
-   z-index: 0;
- }
+  width: 100%;
+  z-index: 0;
+}
+
+.contain {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll
+}
+.contain::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+  display: none
+}

@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="contain">
 		<image style="width: 100%;z-index: -1" mode="widthFix" src="https://s2.loli.net/2024/07/22/mRzPEJwyfAtpGch.png">
 		</image>
 

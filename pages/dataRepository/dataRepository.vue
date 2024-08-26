@@ -1,9 +1,9 @@
 <template>
-  <view>
+  <view class="contain">
     <image src="https://s2.loli.net/2024/07/23/ztS59LHgnxpUIOl.png" style="width: 100%;" mode="widthFix"/>
 
     <view class="button-container">
-      <scroll-view scroll-x="true"  enhanced="true" show-scrollbar="false">
+      <scroll-view scroll-x="true"  :enhanced="true" :show-scrollbar="false" >
         <view class="button-wrapper">
           <button
               :class="topicId === button.id ? 'selected-btn' : 'default-btn'"
@@ -17,7 +17,7 @@
           </button>
         </view>
       </scroll-view>
-    </view>s
+    </view>
 
     <view style="padding: 20px 20px 0 20px">
       <uni-row class="functionArea">

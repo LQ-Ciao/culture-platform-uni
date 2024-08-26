@@ -2,20 +2,23 @@
   <view>
     <image src="https://s2.loli.net/2024/07/23/ztS59LHgnxpUIOl.png" style="width: 100%;" mode="widthFix"/>
 
-    <scroll-view scroll-x="true" class="button-container" enhanced="true" show-scrollbar="false">
-      <view class="button-wrapper">
-        <button
-            :class="topicId === button.id ? 'selected-btn' : 'default-btn'"
-            v-for="(button) in buttonList"
-            :key="button.id"
-            @click="selectButton(button.id)"
-            style="margin-right: 24px;"
-            size="mini"
-        >
-          {{ button.name }}
-        </button>
-      </view>
-    </scroll-view>
+    <view class="button-container">
+      <scroll-view scroll-x="true"  enhanced="true" show-scrollbar="false">
+        <view class="button-wrapper">
+          <button
+              :class="topicId === button.id ? 'selected-btn' : 'default-btn'"
+              v-for="(button) in buttonList"
+              :key="button.id"
+              @click="selectButton(button.id)"
+              style="margin-right: 24px;"
+              size="mini"
+          >
+            {{ button.name }}
+          </button>
+        </view>
+      </scroll-view>
+    </view>s
+
     <view style="padding: 20px 20px 0 20px">
       <uni-row class="functionArea">
         <function-btn
@@ -56,27 +59,6 @@ export default {
       topicId: null,
       buttonList: [],
       artifactsList: [],
-      // artifactsList: [{
-      //   img: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
-      //   , name: '明德化窑白釉荷叶洗'
-      //   , url: ""
-      // }, {
-      //   img: 'https://s2.loli.net/2024/08/17/LkhJiNMuoPHlmfb.png'
-      //   , name: '南宋鎏金银碗'
-      //   , url: ""
-      // }, {
-      //   img: 'https://s2.loli.net/2024/08/17/AHQY2zhxvqLcKoT.png'
-      //   , name: '清景德镇窑粉彩瓜果碗'
-      //   , url: ""
-      // }, {
-      //   img: 'https://s2.loli.net/2024/08/17/o6qCXPBmfZbM9rv.png'
-      //   , name: '明德化窑十八手准提道人像'
-      //   , url: ""
-      // }, {
-      //   img: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
-      //   , name: '明德化窑白釉荷叶洗'
-      //   , url: ""
-      // }],
 
       bannerList: [{
         imgPath: 'https://s2.loli.net/2024/07/23/M8CdwhtqSTx6Q3F.png'
@@ -155,7 +137,7 @@ export default {
 <style>
 .button-container {
   display: flex;
-  padding: 24px 24px 0 24px;
+  padding: 24px 0 0 24px;
   flex-direction: row;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */

@@ -1,6 +1,6 @@
 <template>
   <view class="contain" style="background-image: url('https://s2.loli.net/2024/08/28/qrBN9EficdsHz4k.png')">
-    <image src="https://s2.loli.net/2024/07/23/ztS59LHgnxpUIOl.png" style="width: 100%;" mode="widthFix"/>
+    <image src="https://s2.loli.net/2024/08/28/aLVd7pDGyK92hNv.png" style="width: 100%;" mode="widthFix"/>
 
     <view class="button-container">
       <scroll-view scroll-x="true" :enhanced="true" :show-scrollbar="false">

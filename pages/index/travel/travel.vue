@@ -1,7 +1,7 @@
 <template>
   <view class="contain">
     <image style="width: 100%;z-index: -1" mode="widthFix"
-           src="https://s2.loli.net/2024/07/22/n6TM1GuHwAy28Rk.png">
+           src="https://s2.loli.net/2024/08/28/2dcot3ieznPuDgC.png">
     </image>
 
     <uni-card>

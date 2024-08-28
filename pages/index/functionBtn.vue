@@ -1,7 +1,7 @@
 <template>
   <uni-col :span="span">
     <view class="centered">
-      <image :src="this.getImg(iconPath)" mode="heightFix" class="function-icon"/>
+      <image :src="this.getImg(iconPath)" mode="aspectFill" class="function-icon"/>
     </view>
     <br/>
     <label class="centered-label">{{ functionLabel }}</label>
@@ -55,7 +55,8 @@ export default {
 }
 
 .function-icon {
-  height: 50px;
+  height: 75px;
+  width: 75px;
   padding: 0 10px 0 10px;
 }
 

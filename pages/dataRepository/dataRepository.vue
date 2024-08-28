@@ -3,7 +3,7 @@
     <image src="https://s2.loli.net/2024/07/23/ztS59LHgnxpUIOl.png" style="width: 100%;" mode="widthFix"/>
 
     <view class="button-container">
-      <scroll-view scroll-x="true"  :enhanced="true" :show-scrollbar="false" >
+      <scroll-view scroll-x="true" :enhanced="true" :show-scrollbar="false">
         <view class="button-wrapper">
           <text
               :class="topicId === button.id ? 'selected-btn' : 'default-btn'"
@@ -41,7 +41,6 @@
         :imgPath="banner.imgPath"
         :title="banner.name"
         @tap="bannerTapHandler(banner.url)"
-        style="margin: -200px 0 -10px 0"
     >
     </base-banner>
 
@@ -162,7 +161,7 @@ scroll-view::-webkit-scrollbar {
 .selected-btn {
   flex: 0 0 auto; /* 确保按钮不会拉伸 */
   margin-right: 10px; /* 按钮之间的间距 */
-  color: #32a9a5;
+  color: #37A09E;
 }
 
 .default-btn {

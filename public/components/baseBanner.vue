@@ -32,13 +32,13 @@ export default {
   display: flex;
   align-items: center;
   width: 90%; /* Adjust as needed */
-  margin: 30px auto;
+  margin: 10px auto;
 }
 
 .view-more-text {
   position: absolute;
   left: 10px; /* Adjust as needed for horizontal alignment */
-  color: #280e0c;
+  color: #2C0B0B;
   font-size: 18px;
   font-weight: bold;
   z-index: 1;

@@ -1,11 +1,11 @@
 <template>
-  <view class="contain">
+  <view class="contain" style="background-image: url('https://s2.loli.net/2024/08/28/YFLVcRUEj2D94oO.png')">
     <!--    <button @tap="myTest">test</button>-->
     <image style="width: 100%" mode="widthFix"
            src="https://s2.loli.net/2024/07/22/bQIWnFacmwJDB45.png">
     </image>
 
-    <uni-card>
+    <view style="padding: 20px 24px 0 24px">
       <uni-row class="functionArea">
         <function-btn
             v-for="item in functionList"
@@ -39,7 +39,7 @@
                     class="news-item"
         ></index-news>
       </view>
-    </uni-card>
+    </view>
   </view>
 </template>
 
@@ -148,7 +148,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 24px 10px 24px;
+  margin-bottom: 20px;
   background-color: #fbf4e8;
   border-radius: 10px;
 }

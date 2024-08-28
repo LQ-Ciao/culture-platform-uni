@@ -16,7 +16,7 @@
       </view>
     </view>
 
-    <view style="background-color: #fffbf5;margin: 20px 20px 20px 20px">
+    <view style="background-color: #fffbf5;padding: 20px 20px 20px 20px">
       <uni-row :gutter="50">
         <uni-col :span="12">
           <count-btn

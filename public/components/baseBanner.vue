@@ -39,7 +39,7 @@ export default {
   position: absolute;
   left: 10px; /* Adjust as needed for horizontal alignment */
   color: #280e0c;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   z-index: 1;
   font-family: SimSun;

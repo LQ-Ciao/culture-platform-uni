@@ -5,16 +5,16 @@
     <view class="button-container">
       <scroll-view scroll-x="true"  :enhanced="true" :show-scrollbar="false" >
         <view class="button-wrapper">
-          <button
+          <text
               :class="topicId === button.id ? 'selected-btn' : 'default-btn'"
               v-for="(button) in buttonList"
               :key="button.id"
               @click="selectButton(button.id)"
-              style="margin-right: 24px;"
+              style="margin-right: 24px;font-family: SimSun;font-weight: bolder"
               size="mini"
           >
             {{ button.name }}
-          </button>
+          </text>
         </view>
       </scroll-view>
     </view>
@@ -40,7 +40,9 @@
         v-for="banner in bannerList"
         :imgPath="banner.imgPath"
         :title="banner.name"
-        @tap="bannerTapHandler(banner.url)">
+        @tap="bannerTapHandler(banner.url)"
+        style="margin: -200px 0 -10px 0"
+    >
     </base-banner>
 
   </view>
@@ -160,8 +162,7 @@ scroll-view::-webkit-scrollbar {
 .selected-btn {
   flex: 0 0 auto; /* 确保按钮不会拉伸 */
   margin-right: 10px; /* 按钮之间的间距 */
-  color: #fff;
-  background-color: #007aff;
+  color: #32a9a5;
 }
 
 .default-btn {

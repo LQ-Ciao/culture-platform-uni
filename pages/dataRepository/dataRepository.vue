@@ -3,7 +3,7 @@
     <image src="https://s2.loli.net/2024/08/28/aLVd7pDGyK92hNv.png" style="width: 100%;" mode="widthFix"/>
 
     <view class="button-container">
-      <scroll-view scroll-x="true" :enhanced="true" :show-scrollbar="false">
+      <scroll-view scroll-x="true" :enhanced="true" :show-scrollbar="false" style="padding-right: 30px">
         <view class="button-wrapper">
           <text
               :class="topicId === button.id ? 'selected-btn' : 'default-btn'"

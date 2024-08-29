@@ -7,12 +7,27 @@
       >
       </image>
       <view class="base-msg">
-        <image :src="defaultAvatar" mode="widthFix" class="avatar"></image>
-        <text class="username">{{ username }}</text>
-        <button class="mini-btn"
-                type="default" size="mini"
-                style="margin-left: 100px;background-color: #d9fffe">编辑资料
-        </button>
+<!--        <uni-row>-->
+<!--          <uni-col :span="8">-->
+<!--            <image :src="defaultAvatar" mode="widthFix" class="avatar"></image>-->
+<!--          </uni-col>-->
+<!--          <uni-col :span="6">-->
+<!--            <text class="username">{{ username }}</text>-->
+<!--          </uni-col>-->
+<!--          <uni-col :span="8" :offset="7">-->
+<!--            <button class="mini-btn"-->
+<!--                    type="default" size="mini"-->
+<!--                    style="background-color: #d9fffe">编辑资料-->
+<!--            </button>-->
+<!--          </uni-col>-->
+<!--        </uni-row>-->
+
+                <image :src="defaultAvatar" mode="widthFix" class="avatar"></image>
+                <text class="username">{{ username }}</text>
+                <button class="mini-btn"
+                        type="default" size="mini"
+                        style="background-color: #d9fffe;margin-left: 100px">编辑资料
+                </button>
       </view>
     </view>
 
@@ -38,10 +53,10 @@
 
       <!--菜单-->
       <view style="margin-top: 20px">
-          <menu-item v-for="item in menuList"
-                     :icon-type="item.iconType"
-                     :menu-text="item.menuText"
-          ></menu-item>
+        <menu-item v-for="item in menuList"
+                   :icon-type="item.iconType"
+                   :menu-text="item.menuText"
+        ></menu-item>
       </view>
 
       <watch-more-btn text="退出登录"></watch-more-btn>
@@ -64,16 +79,16 @@ export default {
       thumbCount: 0,
       collectCount: 0,
       menuList: [{
-        iconType: "person-filled",
+        iconType: "icon-account-information",
         menuText: "账号信息"
       }, {
-        iconType: "star-filled",
+        iconType: "icon-collection",
         menuText: "我的收藏"
       }, {
-        iconType: "headphones",
+        iconType: "icon-consulting-service",
         menuText: "我的资讯"
       }, {
-        iconType: "chat-filled",
+        iconType: "icon-comment",
         menuText: "我的评论"
       }]
     }
@@ -81,12 +96,13 @@ export default {
 }
 </script>
 
+<style scoped src="/static/icomoon/style.css"></style>
 <style>
 .header {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .base-msg {
@@ -96,6 +112,7 @@ export default {
   position: absolute;
   color: white;
   font-size: 18px;
+  padding-left: 20px;
   z-index: 1;
 }
 

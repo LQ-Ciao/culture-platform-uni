@@ -1,6 +1,8 @@
 <template>
   <view>
-    <button @tap="localTest">localTest</button>
+    <text>图标测试</text>
+    <text class="icon-comment"></text>
+    <text class="mls"> icon-comment</text>
   </view>
 
 </template>
@@ -10,18 +12,14 @@ import api from '/api/api'
 
 export default {
 
+
   data() {
 
   },
 
   methods: {
-    localTest() {
-      console.log('localTest');
-
-      api.testOperate({}, 0).then(res => {
-      })
-    },
-
   },
 }
 </script>
+
+<style scoped src="/static/icomoon/style.css"></style>

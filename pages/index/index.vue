@@ -1,6 +1,6 @@
 <template>
   <view class="contain" style="background-image: url('https://s2.loli.net/2024/08/28/YFLVcRUEj2D94oO.png')">
-        <button @tap="myTest">test</button>
+<!--    <button @tap="myTest">test</button>-->
     <image style="width: 100%" mode="widthFix"
            src="https://s2.loli.net/2024/08/28/tCQkwg7bTuGi6B3.png">
     </image>
@@ -159,7 +159,6 @@ export default {
   background-color: #fbf4e8;
   border-radius: 10px;
 }
-
 
 
 </style>

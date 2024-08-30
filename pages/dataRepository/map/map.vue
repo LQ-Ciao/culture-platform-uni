@@ -1,11 +1,14 @@
 <template>
   <view class="background">
     <uni-row :gutter="50">
-      <uni-col :span="12"
-               v-for="item in areaList"
+      <uni-col :span="24"
+               v-for="(item,index) in areaList"
                @tap="tapHandler(item)"
       >
-        <area-option :text="item.label"></area-option>
+        <!--        <area-option :text="item.label"></area-option>-->
+        <text class="areaName" @tap="tapHandler(item)">{{ item.label }}</text>
+        <view class="divLine" v-if="index < areaList.length -1"></view>
+<!--        <nut-divider v-if="index < areaList.length"/>-->
       </uni-col>
 
     </uni-row>
@@ -56,11 +59,26 @@ export default {
 
 <style scoped>
 .background {
-  padding: 125px 20px 0 20px;
-  background-image: url('https://s2.loli.net/2024/07/24/bd3B9MUraPOyDLR.png');
+  padding: 50px 20px 0 20px;
+  background-image: url('https://s2.loli.net/2024/08/30/BxC9PJZNclI26kj.png');
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   height: 800px;
+}
+
+.areaName {
+  font-size: 24px;
+  font-family: SimSun;
+  font-weight: bolder;
+  padding-left: 30px;
+  color: #2d0b0b;
+}
+
+.divLine{
+  background: #e2d2ba;
+  width: 100%;
+  height: 2px;
+  margin: 15px 0 15px 0;
 }
 </style>

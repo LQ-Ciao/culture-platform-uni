@@ -11,6 +11,7 @@
             v-for="item in functionList"
             :iconPath="item.iconPath"
             :functionLabel="item.functionLabel"
+            icon-size="60px"
             @tap="tapHandler(item)">
         </function-btn>
       </uni-row>

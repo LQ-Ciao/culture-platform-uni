@@ -25,6 +25,7 @@
             v-for="item in artifactsList"
             :iconPath="item.img"
             :functionLabel="item.name"
+            icon-size="100px"
             :span="12">
         </function-btn>
       </uni-row>

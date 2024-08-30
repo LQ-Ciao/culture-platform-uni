@@ -4,12 +4,13 @@
       <image src="/static/icon/title_bg.png" style="width: 25px" mode="widthFix"></image>
       <text style="font-size: 25px"> 文旅服务</text>
       <view style="margin-top: 20px">
-        <uni-row :gutter="50">
+        <uni-row :gutter="50" class="functionArea">
           <function-btn
               v-for="item in functionList"
               :iconPath="item.iconPath"
               :functionLabel="item.functionLabel"
               :span="8"
+              mode="widthFix"
               @tap="tapHandler(item)">
           </function-btn>
         </uni-row>

@@ -1,7 +1,7 @@
 <template>
   <uni-col :span="span">
     <view class="centered">
-      <image :src="this.getImg(iconPath)" mode="aspectFill" class="function-icon"/>
+      <image :src="this.getImg(iconPath)" :mode="mode" :style="iconStyle"/>
     </view>
     <br/>
     <label class="centered-label">{{ functionLabel }}</label>
@@ -27,8 +27,27 @@ export default {
     functionLabel: {
       type: String,
       required: true
+    },
+    iconSize: {
+      type: String,
+      default: '75px'
+    },
+    mode:{
+      type: String,
+      default: 'aspectFill'
     }
   },
+
+  computed: {
+    iconStyle() {
+      return {
+        height: this.iconSize,
+        width: this.iconSize,
+        padding: '0 10px 0 10px'
+      };
+    }
+  },
+
   methods: {
     getImg(iconPath) {
       if (iconPath === '' || iconPath === null) {
@@ -55,8 +74,6 @@ export default {
 }
 
 .function-icon {
-  height: 75px;
-  width: 75px;
   padding: 0 10px 0 10px;
 }
 

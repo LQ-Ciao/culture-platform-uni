@@ -4,7 +4,7 @@
       <image :src="this.getImg(iconPath)" :mode="mode" :style="iconStyle"/>
     </view>
     <br/>
-    <label class="centered-label">{{ functionLabel }}</label>
+    <text class="centered-label">{{ functionLabel }}</text>
   </uni-col>
 </template>
 
@@ -32,7 +32,7 @@ export default {
       type: String,
       default: '75px'
     },
-    mode:{
+    mode: {
       type: String,
       default: 'aspectFill'
     }
@@ -43,7 +43,7 @@ export default {
       return {
         height: this.iconSize,
         width: this.iconSize,
-        padding: '0 10px 0 10px'
+        borderRadius: '10px'
       };
     }
   },
@@ -90,4 +90,5 @@ export default {
   justify-content: center;
   font-size: 12px;
 }
+
 </style>

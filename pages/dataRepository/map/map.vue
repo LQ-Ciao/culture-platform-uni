@@ -71,14 +71,14 @@ export default {
   font-size: 24px;
   font-family: SimSun;
   font-weight: bolder;
-  padding-left: 30px;
+  padding-left: 18px;
   color: #2d0b0b;
 }
 
 .divLine{
   background: #e2d2ba;
-  width: 100%;
-  height: 2px;
-  margin: 15px 0 15px 0;
+  width: 90%;
+  height: 1rpx;
+  margin: 15px 18px 15px 20px;
 }
 </style>

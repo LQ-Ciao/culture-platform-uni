@@ -20,13 +20,14 @@
     </view>
 
     <view style="padding: 20px 20px 0 20px">
-      <uni-row class="functionArea">
+      <uni-row class="functionArea" :gutter="0">
         <function-btn
             v-for="item in artifactsList"
             :iconPath="item.img"
             :functionLabel="item.name"
             icon-size="100px"
-            :span="12">
+            :span="8"
+        >
         </function-btn>
       </uni-row>
     </view>
@@ -60,7 +61,45 @@ export default {
     return {
       topicId: null,
       buttonList: [],
-      artifactsList: [],
+      artifactsList: [
+        {
+          "id": 163,
+          "code": "3501A01030024080100003",
+          "category": "文化与自然遗产/博物馆/瓷器",
+          "name": "明德化窑十八手准提坐像",
+          "img": "https://192-168-154-7181-9p3p97oc71mow1.ztna-dingtalk.com/tmp_file/202408/01/1722500444_7107d1898b2f4382a7314688cfbcf9cb.png"
+        }, {
+          "id": 169,
+          "code": "3501A01040024071500003",
+          "category": "文化与自然遗产/博物馆/铜器",
+          "name": "二十世纪嵌琅五彩花卉蝶瓶",
+          "img": "https://192-168-154-7181-9p3p97oc71mow1.ztna-dingtalk.com/tmp_file/202408/19/1724054714_截屏2024-08-19 16.17.30.png"
+        }, {
+          "id": 174,
+          "code": "3501A01010024071500002",
+          "category": "文化与自然遗产/博物馆/玉石器、宝石",
+          "name": "明碧玉双螭首啣环觚",
+          "img": "https://192-168-154-7181-9p3p97oc71mow1.ztna-dingtalk.com/tmp_file/202408/19/1724054651_截屏2024-08-19 16.16.24.png"
+        }, {
+          "id": 177,
+          "code": "3501A01030024080100002",
+          "category": "文化与自然遗产/博物馆/瓷器",
+          "name": "清景德镇窑粉彩瓜果纹碗",
+          "img": "https://192-168-154-7181-9p3p97oc71mow1.ztna-dingtalk.com/tmp_file/202408/01/1722495914_61231145d0c749cfa752ff62057cd680.png"
+        }, {
+          "id": 163,
+          "code": "3501A01030024080100003",
+          "category": "文化与自然遗产/博物馆/瓷器",
+          "name": "明德化窑十八手准提坐像",
+          "img": "https://192-168-154-7181-9p3p97oc71mow1.ztna-dingtalk.com/tmp_file/202408/01/1722500444_7107d1898b2f4382a7314688cfbcf9cb.png"
+        }, {
+          "id": 169,
+          "code": "3501A01040024071500003",
+          "category": "文化与自然遗产/博物馆/铜器",
+          "name": "二十世纪嵌琅五彩花卉蝶瓶",
+          "img": "https://192-168-154-7181-9p3p97oc71mow1.ztna-dingtalk.com/tmp_file/202408/19/1724054714_截屏2024-08-19 16.17.30.png"
+        }
+      ],
 
       bannerList: [{
         imgPath: 'https://s2.loli.net/2024/07/23/M8CdwhtqSTx6Q3F.png'
@@ -105,11 +144,16 @@ export default {
       }
       api.getCulturalRelics(param).then(res => {
         if (res.code === 0) {
-          this.artifactsList = res.result;
+          // 正式环境取消改行注释
+          // this.artifactsList = res.result;
 
           for (var i = 0; i < this.artifactsList.length; i++) {
             let imgPath = this.artifactsList[i].img;
             imgPath = imgPath.replace("http://", "https://");
+            if (this.artifactsList[i].name.length > 9) {
+              // 超出部分以省略号显示
+              this.artifactsList[i].name = this.artifactsList[i].name.substring(0, 9) + "..."
+            }
 
             this.artifactsList[i].img = imgPath;
           }

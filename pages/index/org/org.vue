@@ -1,43 +1,51 @@
 <template>
   <view class="contain">
     <uni-card>
-      <image src="/static/icon/title_bg.png" style="width: 25px" mode="widthFix"></image>
-      <text style="font-size: 25px"> 博物馆</text>
-      <base-banner v-for="item in museumList"
-                   :title="item.title"
-                   imgPath="https://s2.loli.net/2024/07/23/M8CdwhtqSTx6Q3F.png"
-                   @tap="tapHandler(item)"
-      ></base-banner>
+      <view style="margin-top: 10px">
+        <image src="/static/icon/title_bg.png" style="width: 25px" mode="widthFix"></image>
+        <text class="single-icon-subtitle"> 博物馆</text>
+        <base-banner v-for="item in museumList"
+                     :title="item.title"
+                     imgPath="https://s2.loli.net/2024/07/23/M8CdwhtqSTx6Q3F.png"
+                     @tap="tapHandler(item)"
+        ></base-banner>
+      </view>
     </uni-card>
 
     <uni-card>
-      <image src="/static/icon/title_bg.png" style="width: 25px" mode="widthFix"></image>
-      <text style="font-size: 25px"> 纪念馆</text>
-      <base-banner v-for="item in memorialList"
-                   :title="item.title"
-                   imgPath="https://s2.loli.net/2024/07/23/M8CdwhtqSTx6Q3F.png"
-                   @tap="tapHandler(item)"
-      ></base-banner>
+      <view style="margin-top: 10px">
+        <image src="/static/icon/title_bg.png" style="width: 25px" mode="widthFix"></image>
+        <text class="single-icon-subtitle"> 纪念馆</text>
+        <base-banner v-for="item in memorialList"
+                     :title="item.title"
+                     imgPath="https://s2.loli.net/2024/07/23/M8CdwhtqSTx6Q3F.png"
+                     @tap="tapHandler(item)"
+        ></base-banner>
+      </view>
     </uni-card>
 
     <uni-card>
-      <image src="/static/icon/title_bg.png" style="width: 25px" mode="widthFix"></image>
-      <text style="font-size: 25px"> 文旅景区</text>
-      <base-banner v-for="item in tourismList"
-                   :title="item.title"
-                   imgPath="https://s2.loli.net/2024/07/23/M8CdwhtqSTx6Q3F.png"
-                   @tap="tapHandler(item)"
-      ></base-banner>
+      <view style="margin-top: 10px">
+        <image src="/static/icon/title_bg.png" style="width: 25px" mode="widthFix"></image>
+        <text class="single-icon-subtitle"> 文旅景区</text>
+        <base-banner v-for="item in tourismList"
+                     :title="item.title"
+                     imgPath="https://s2.loli.net/2024/07/23/M8CdwhtqSTx6Q3F.png"
+                     @tap="tapHandler(item)"
+        ></base-banner>
+      </view>
     </uni-card>
 
     <uni-card>
-      <image src="/static/icon/title_bg.png" style="width: 25px" mode="widthFix"></image>
-      <text style="font-size: 25px"> 图书馆</text>
-      <base-banner v-for="item in libraryList"
-                   :title="item.title"
-                   imgPath="https://s2.loli.net/2024/07/23/M8CdwhtqSTx6Q3F.png"
-                   @tap="tapHandler(item)"
-      ></base-banner>
+      <view style="margin-top: 10px">
+        <image src="/static/icon/title_bg.png" style="width: 25px" mode="widthFix"></image>
+        <text class="single-icon-subtitle"> 图书馆</text>
+        <base-banner v-for="item in libraryList"
+                     :title="item.title"
+                     imgPath="https://s2.loli.net/2024/07/23/M8CdwhtqSTx6Q3F.png"
+                     @tap="tapHandler(item)"
+        ></base-banner>
+      </view>
     </uni-card>
   </view>
 </template>

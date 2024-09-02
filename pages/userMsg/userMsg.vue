@@ -1,7 +1,7 @@
 <template>
   <view>
     <view class="header">
-      <image src="https://s2.loli.net/2024/07/23/RfKvVOHwuIBPS8i.png"
+      <image src="https://s2.loli.net/2024/09/02/wYH2VcrnDJSIpbv.png"
              mode="widthFix"
              style="width: 100%;z-index: 0;"
       >

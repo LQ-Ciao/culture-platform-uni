@@ -32,6 +32,7 @@
   height: 100vh;
   overflow-y: scroll
 }
+
 .contain::-webkit-scrollbar {
   width: 0;
   height: 0;
@@ -39,3 +40,7 @@
   display: none
 }
 
+.single-icon-subtitle {
+  font-size: 20px;
+  margin-top: 20px
+}

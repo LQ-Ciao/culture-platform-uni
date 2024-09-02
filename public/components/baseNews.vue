@@ -7,7 +7,7 @@
         <text class="footerTime">{{ time }}</text>
       </uni-col>
       <uni-col :span="12">
-        <image class="img" :src="imgPath" mode="aspectFill" style="width: 100%;height:75px; margin-bottom: 24px"></image>
+        <image class="img" :src="imgPath" mode="aspectFill" style="width: 100%;height:90px; margin-bottom: 24px"></image>
       </uni-col>
       </view>
     </uni-row>
@@ -53,8 +53,9 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  font-size: 14px;
+  font-size: 12px;
   color: #402120;
+  margin-top: 10px;
 }
 
 .img {

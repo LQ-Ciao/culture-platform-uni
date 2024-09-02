@@ -10,7 +10,7 @@
               v-for="(button) in buttonList"
               :key="button.id"
               @click="selectButton(button.id)"
-              style="margin-right: 24px;font-weight: bolder"
+              style="margin-right: 24px;font-weight: bolder;font-family: serif"
               size="mini"
           >
             {{ button.name }}

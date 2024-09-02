@@ -7,7 +7,7 @@
                style="width: 100%;" mode="widthFix"></image>
       </uni-col>
       <uni-col :span="16">
-        <text style="font-size: 20px;font-weight: bold;font-family: SimSun;color: #280e0c;">{{ text }}</text>
+        <text style="font-size: 20px;font-weight: bold;font-family: serif;color: #280e0c;">{{ text }}</text>
       </uni-col>
       <uni-col :span="4">
         <text v-if="showMoreBtn">更多 ></text>

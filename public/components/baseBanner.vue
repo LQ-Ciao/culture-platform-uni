@@ -42,7 +42,7 @@ export default {
   font-size: 18px;
   font-weight: bold;
   z-index: 1;
-  font-family: SimSun;
+  font-family: serif;
   display: flex;
   align-items: center;
   height: 100%; /* Ensure vertical centering */

@@ -69,7 +69,7 @@ export default {
 
 .areaName {
   font-size: 24px;
-  font-family: SimSun;
+  font-family: serif;
   font-weight: bolder;
   padding-left: 18px;
   color: #2d0b0b;

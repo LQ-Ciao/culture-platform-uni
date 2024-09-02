@@ -57,11 +57,11 @@ export default {
     return {
       newsList: [{
         title: "海上丝绸之路是古代中西方文明通过海路，以商贸为依托，承载文化、艺术交流的和平之路。"
-        , time: "2024年7月22日 15点24分"
+        , time: "2024-07-22 15:24:00"
         , imgPath: "https://s2.loli.net/2024/07/22/n6TM1GuHwAy28Rk.png"
       }, {
         title: "海上丝绸之路是古代中西方文明通过海路，以商贸为依托，承载文化、艺术交流的和平之路。"
-        , time: "2024年7月22日 15点24分"
+        , time: "2024-07-22 15:24:00"
         , imgPath: "https://s2.loli.net/2024/07/22/n6TM1GuHwAy28Rk.png"
       }],
 

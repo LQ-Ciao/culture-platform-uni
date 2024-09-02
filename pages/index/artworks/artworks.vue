@@ -1,64 +1,58 @@
 <template>
-	<view class="contain">
-		<uni-card>
-      <view style="padding: 20px 20px 0 20px">
-        <function-btn
-            v-for="item in artifactsList"
-            :iconPath="item.iconPath"
-            :functionLabel="item.functionLabel"
-            :span="8">
-        </function-btn>
-      </view>
-
-
-    </uni-card>
-	</view>
+  <view class="contain">
+    <view style="height:100%;padding-top: 20px;background-image: url('https://s2.loli.net/2024/09/02/K4Iy8PZ61SqEnMm.png')">
+    <function-btn
+        v-for="item in artifactsList"
+        :iconPath="item.iconPath"
+        :functionLabel="item.functionLabel"
+        :span="8">
+    </function-btn>
+  </view>
+  </view>
 </template>
 
 <script>
-	import functionBtn from "../functionBtn.vue";
+import functionBtn from "../functionBtn.vue";
 
-  export default {
-    components: {functionBtn},
-		data() {
-			return {
-        buttonList: [
-          {label: "全部", id: '1'},
-          {label: "福建方志馆", id: '2'},
-          {label: "文化数据库", id: '3'},
-          {label: "福建历史博物馆", id: '4'},
-          {label: "历史文化", id: '5'},
-          {label: "确权分组", id: '6'},
-          {label: "", id: '7'}
-        ],
+export default {
+  components: {functionBtn},
+  data() {
+    return {
+      buttonList: [
+        {label: "全部", id: '1'},
+        {label: "福建方志馆", id: '2'},
+        {label: "文化数据库", id: '3'},
+        {label: "福建历史博物馆", id: '4'},
+        {label: "历史文化", id: '5'},
+        {label: "确权分组", id: '6'},
+        {label: "", id: '7'}
+      ],
 
-        artifactsList: [{
-          iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
-          , functionLabel: '明德化窑白釉荷叶洗'
-          , url: "https://www.baidu.com"
-        }, {
-          iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
-          , functionLabel: '明德化窑白釉荷叶洗'
-          , url: "https://www.baidu.com"
-        }, {
-          iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
-          , functionLabel: '明德化窑白釉荷叶洗'
-          , url: "https://www.baidu.com"
-        }, {
-          iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
-          , functionLabel: '明德化窑白釉荷叶洗'
-          , url: "https://www.baidu.com"
-        }, {
-          iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
-          , functionLabel: '明德化窑白釉荷叶洗'
-          , url: "https://www.baidu.com"
-        }],
-			}
-		},
-		methods: {
-			
-		}
-	}
+      artifactsList: [{
+        iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
+        , functionLabel: '明德化窑白釉荷叶洗'
+        , url: "https://www.baidu.com"
+      }, {
+        iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
+        , functionLabel: '明德化窑白釉荷叶洗'
+        , url: "https://www.baidu.com"
+      }, {
+        iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
+        , functionLabel: '明德化窑白釉荷叶洗'
+        , url: "https://www.baidu.com"
+      }, {
+        iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
+        , functionLabel: '明德化窑白釉荷叶洗'
+        , url: "https://www.baidu.com"
+      }, {
+        iconPath: 'https://s2.loli.net/2024/07/22/ICwzDNmMXUptJbL.png'
+        , functionLabel: '明德化窑白釉荷叶洗'
+        , url: "https://www.baidu.com"
+      }],
+    }
+  },
+  methods: {}
+}
 </script>
 
 <style scoped src="/public/css/common.scss"></style>

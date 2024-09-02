@@ -60,7 +60,7 @@ export default {
 <style scoped>
 .background {
   padding: 50px 20px 0 20px;
-  background-image: url('https://s2.loli.net/2024/08/30/BxC9PJZNclI26kj.png');
+  background-image: url('https://s2.loli.net/2024/09/02/K4Iy8PZ61SqEnMm.png');
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;

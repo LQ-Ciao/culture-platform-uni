@@ -1,10 +1,10 @@
 <template>
-  <view class="contain">
+  <view class="contain" style="background-image: url('https://s2.loli.net/2024/09/02/MSJA6hlydcmLIxT.png')">
     <image style="width: 100%;z-index: -1" mode="widthFix"
            src="https://s2.loli.net/2024/08/28/2dcot3ieznPuDgC.png">
     </image>
 
-    <uni-card>
+    <view style="padding: 20px 24px 0 24px">
       <uni-row class="functionArea">
         <function-btn
             v-for="(item) in functionList"
@@ -25,7 +25,7 @@
       ></base-news>
 
       <watch-more-btn @tap="watchMore"></watch-more-btn>
-    </uni-card>
+    </view>
   </view>
 </template>
 

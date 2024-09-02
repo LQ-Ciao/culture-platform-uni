@@ -1,5 +1,5 @@
 <template>
-  <view class="contain" style="background-image: url('https://s2.loli.net/2024/09/02/K4Iy8PZ61SqEnMm.png')">
+  <view class="contain" style="background-image: url('https://s2.loli.net/2024/09/02/MSJA6hlydcmLIxT.png')">
     <image style="width: 100%;z-index: -1" mode="widthFix" src="https://s2.loli.net/2024/09/02/XmThaoHtWVC7Mjb.png">
     </image>
 

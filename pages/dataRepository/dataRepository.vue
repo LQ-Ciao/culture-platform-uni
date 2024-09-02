@@ -1,5 +1,5 @@
 <template>
-  <view class="contain" style="background-image: url('https://s2.loli.net/2024/09/02/K4Iy8PZ61SqEnMm.png')">
+  <view class="contain" style="background-image: url('https://s2.loli.net/2024/09/02/MSJA6hlydcmLIxT.png')">
     <image src="https://s2.loli.net/2024/09/02/gLqCyPbxGmlBDAX.png" style="width: 100%;" mode="widthFix"/>
 
     <view class="button-container">

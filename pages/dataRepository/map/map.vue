@@ -32,7 +32,7 @@ export default {
         , {label: '龙岩市', url: 'https://wlj.longyan.gov.cn/'}
         , {label: '莆田市', url: ''}
         , {label: '宁德市', url: 'https://wlj.ningde.gov.cn/'}
-        , {label: '平潭市', url: 'https://lfw.pingtan.gov.cn/'}
+        , {label: '平潭综合实验区', url: 'https://lfw.pingtan.gov.cn/'}
       ]
     }
   },

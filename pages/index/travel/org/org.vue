@@ -1,8 +1,8 @@
 <template>
-  <view class="contain">
+  <view class="contain" style="background-image: url('https://s2.loli.net/2024/09/02/MSJA6hlydcmLIxT.png')">
     <image src="https://s2.loli.net/2024/07/29/Pn9Vc6Dm1wjRS7K.png" style="width: 100%" mode="widthFix"></image>
 
-    <uni-card>
+    <view style="padding: 20px 24px 0 24px">
       <sub-title text="场馆介绍"></sub-title>
       <view class="view-more-component">
         <image class="background-image" src="https://s2.loli.net/2024/07/29/xSqEPz9W8D6ulat.png"
@@ -17,27 +17,29 @@
       <view class="view-more-component">
         <image class="background-image" src="https://s2.loli.net/2024/07/29/hKRtkpSxLb1UinN.png"
                mode="widthFix"></image>
-        <text class="view-more-text" style="color: #000000;font-size: 14px;width:80%">
-          开放时间：每周二至周五09:00~18:00（17:30停止入场）<br>
-          法定节假日及周末：09:00~20:00（19:30停止入场）<br>
-          电话：0591-xxxxxxxx<br>
-          地址：福建省福州市鼓楼区湖头街96号
-        </text>
+        <view class="view-more-text" style="color: #000000;font-size: 14px;width:80%">
+          <view>开放时间：每周二至周五09:00~18:00（17:30停止入场）</view>
+          <view>法定节假日及周末：09:00~20:00（19:30停止入场）</view>
+            <view>电话：0591-xxxxxxxx</view>
+              <view>地址：福建省福州市鼓楼区湖头街96号</view>
+        </view>
       </view>
 
       <sub-title text="典藏文物" :show-more-btn="true"></sub-title>
-
+<!--      <text class="">-->
+<!--        暂无藏品-->
+<!--      </text>-->
 
       <sub-title text="数字展览" :show-more-btn="true"></sub-title>
 
-      <sub-title text="资讯活动" :show-more-btn="true"></sub-title>
+      <sub-title text="资讯活动" :show-more-btub-title="true"></sub-title>
       <base-news v-for="(item) in newsList"
                  :title="item.title"
                  :time="item.time"
                  :imgPath="item.imgPath"
                  class="news-item"
       ></base-news>
-    </uni-card>
+    </view>
   </view>
 </template>
 

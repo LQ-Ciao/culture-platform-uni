@@ -1,6 +1,6 @@
 <template>
-  <view class="contain">
-    <view style="height:100%;background-image: url('https://s2.loli.net/2024/09/02/K4Iy8PZ61SqEnMm.png')">
+  <view class="contain" style="background-image: url('https://s2.loli.net/2024/09/02/K4Iy8PZ61SqEnMm.png')">
+    <view style="height:100%">
       <base-banner
           v-for="banner in bannerList"
           img-path="https://s2.loli.net/2024/07/28/Qzt7DVw21MulYoZ.png"

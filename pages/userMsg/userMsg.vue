@@ -7,27 +7,12 @@
       >
       </image>
       <view class="base-msg">
-<!--        <uni-row>-->
-<!--          <uni-col :span="8">-->
-<!--            <image :src="defaultAvatar" mode="widthFix" class="avatar"></image>-->
-<!--          </uni-col>-->
-<!--          <uni-col :span="6">-->
-<!--            <text class="username">{{ username }}</text>-->
-<!--          </uni-col>-->
-<!--          <uni-col :span="8" :offset="7">-->
-<!--            <button class="mini-btn"-->
-<!--                    type="default" size="mini"-->
-<!--                    style="background-color: #d9fffe">编辑资料-->
-<!--            </button>-->
-<!--          </uni-col>-->
-<!--        </uni-row>-->
-
-                <image :src="defaultAvatar" mode="widthFix" class="avatar"></image>
-                <text class="username">{{ username }}</text>
-                <button class="mini-btn"
-                        type="default" size="mini"
-                        style="background-color: #d9fffe;margin-left: 100px">编辑资料
-                </button>
+        <image :src="defaultAvatar" mode="widthFix" class="avatar"></image>
+        <text class="username">{{ username }}</text>
+        <button
+            type="default" size="mini"
+            style="background-color: #d9fffe">编辑资料
+        </button>
       </view>
     </view>
 
@@ -108,12 +93,13 @@ export default {
 .base-msg {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: absolute;
   color: white;
   font-size: 18px;
   padding-left: 20px;
   z-index: 1;
+  width: 100%;
 }
 
 .avatar {
@@ -125,5 +111,10 @@ export default {
   margin-left: 20px
 }
 
+.mini-btn {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
 
 </style>

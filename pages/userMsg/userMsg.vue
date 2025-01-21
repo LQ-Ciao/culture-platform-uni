@@ -111,10 +111,4 @@ export default {
   margin-left: 20px
 }
 
-.mini-btn {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-
 </style>

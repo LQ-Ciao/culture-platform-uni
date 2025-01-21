@@ -60,7 +60,7 @@ export default {
       }, {
         iconPath: 'https://s2.loli.net/2024/07/23/Gw39jDOPVArCQ46.png'
         , functionLabel: '旅游攻略'
-        , url: ""
+        , url: "/pages/test/myTest/myTest"
         , type: '0'
       }, {
         iconPath: 'https://s2.loli.net/2024/07/23/UWLtNJOyhSzki7o.png',
